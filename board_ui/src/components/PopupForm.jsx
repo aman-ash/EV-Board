@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import './PopForm.css'
 import {formatList} from './helper/FormatList'
-let up ={sections: []}
+let up = {sections: []}
 export default function PopupForm({setOpenModal}) {
     const [inputValue, setInputValue] = useState({
         boardName:"",
