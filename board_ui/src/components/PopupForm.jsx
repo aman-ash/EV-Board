@@ -2,16 +2,28 @@ import React from 'react'
 import { useState } from 'react';
 import './PopForm.css'
 import {formatList} from './helper/FormatList'
-
+let up ={sections: []}
 export default function PopupForm({setOpenModal}) {
-
-    const [format, setFormat] = useState("Retrospective")
-    const [inputValue, setInputValue] = useState("")
+    const [inputValue, setInputValue] = useState({
+        boardName:"",
+        description:"",
+        format: "Retrospective",
+        sections:[],
+    });
 
     const handleChange = (e) =>{
-        setFormat(e.target.value)
+        setInputValue((prev)=>({
+            ...prev, [e.target.name]: e.target.value,
+        }))
     }
-
+    const updateFieldChanged = index => e => {
+        up.sections[index] = e.target.value
+        setInputValue((prev)=>({
+            ...prev,
+            ...up,
+        }))
+    }
+    console.log(inputValue)
     return(
   <div className="modalBackground">
       <div className="modalContainer">
@@ -25,15 +37,15 @@ export default function PopupForm({setOpenModal}) {
             <form>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">EvBoard Name*</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                    <input type="text" name='boardName' value={inputValue.boardName} onChange={handleChange} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
                 </div>
                  <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Description*</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                    <input type="text" name='description' value={inputValue.description} onChange={handleChange} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Format*</label>
-                    <select class="form-control" value={format} onChange={handleChange}>
+                    <select class="form-control" name='format' value={inputValue.format} onChange={handleChange}>
                         <option value="Retrospective">Retrospective</option>
                         <option value="Pros & Cons">Pros and cons</option>
                         <option value="One Section">1 Section</option>
@@ -43,19 +55,21 @@ export default function PopupForm({setOpenModal}) {
                     </select>
                 </div>
 
-                {formatList.map((item,index) => (
-                    item.name === format && (
+               
+
+                 {formatList.map((item,index) => (
+                    item.name === inputValue.format && (
                         item.sections.map((section,index2) =>(
                             // console.log(section)
                             <div class="mb-3" key={index}>
                                 <label class="form-label">Section {index2 + 1} *</label>
-                                <input type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)}  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder={section} />
+                                <input type="text" value={inputValue.sections[index2]} onChange={updateFieldChanged(index2)}  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" />
                             </div> 
                         ))
                         
                     )
                 ))
-                }
+                } 
 
                 <button type='submit'>Create</button>
             </form>
