@@ -1,39 +1,19 @@
-import User from '../models/user.model';
+import Board from '../models/board.model';
 
-//get all users
-export const getAllUsers = async () => {
-  const data = await User.find();
+//get all Board
+export const getAllBoard = async () => {
+  const data = await Board.find();
   return data;
 };
 
-//create new user
-export const newUser = async (body) => {
-  const data = await User.create(body);
+//create new  Board
+export const newBoard = async (body) => {
+  const data = await Board.create(body);
   return data;
 };
 
-//update single user
-export const updateUser = async (_id, body) => {
-  const data = await User.findByIdAndUpdate(
-    {
-      _id
-    },
-    body,
-    {
-      new: true
-    }
-  );
-  return data;
-};
-
-//delete single user
-export const deleteUser = async (id) => {
-  await User.findByIdAndDelete(id);
-  return '';
-};
-
-//get single user
-export const getUser = async (id) => {
-  const data = await User.findById(id);
+//get single Board
+export const getBoard = async (id) => {
+  const data = await Board.findById(id);
   return data;
 };
