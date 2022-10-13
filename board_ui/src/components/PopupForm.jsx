@@ -2,6 +2,8 @@ import React from 'react'
 import { useState } from 'react';
 import './PopForm.css'
 import {formatList} from './helper/FormatList'
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 let up = {sections: []}
 export default function PopupForm({setOpenModal}) {
     const [inputValue, setInputValue] = useState({
@@ -14,8 +16,10 @@ export default function PopupForm({setOpenModal}) {
     const handleChange = (e) =>{
         setInputValue((prev)=>({
             ...prev, [e.target.name]: e.target.value,
-        }))
+        }))  
     }
+
+
     const updateFieldChanged = index => e => {
         up.sections[index] = e.target.value
         setInputValue((prev)=>({
@@ -23,7 +27,16 @@ export default function PopupForm({setOpenModal}) {
             ...up,
         }))
     }
-    console.log(inputValue)
+
+    useEffect(()=>{
+        up.sections=[]
+        setInputValue((prev)=>({
+            ...prev,
+            ...up,
+        }))
+    },[inputValue.format])
+
+    // console.log(inputValue)
     return(
   <div className="modalBackground">
       <div className="modalContainer">
@@ -55,23 +68,22 @@ export default function PopupForm({setOpenModal}) {
                     </select>
                 </div>
 
-               
+             
 
                  {formatList.map((item,index) => (
                     item.name === inputValue.format && (
                         item.sections.map((section,index2) =>(
-                            // console.log(section)
                             <div class="mb-3" key={index}>
                                 <label class="form-label">Section {index2 + 1} *</label>
                                 <input type="text" value={inputValue.sections[index2]} onChange={updateFieldChanged(index2)}  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" />
                             </div> 
                         ))
-                        
                     )
                 ))
                 } 
 
-                <button type='submit'>Create</button>
+               { console.log(inputValue)}
+                <Link id="submit-btn" type='submit' to="/board">Create</Link>
             </form>
         </div>
       </div>

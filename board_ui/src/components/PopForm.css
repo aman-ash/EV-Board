@@ -72,3 +72,11 @@
   color: white;
   cursor: pointer;
 }
+
+#submit-btn{
+  text-decoration: none;
+  padding: 10px 12px;
+  background-color: skyblue;
+  color: white;
+  text-align: center;
+}

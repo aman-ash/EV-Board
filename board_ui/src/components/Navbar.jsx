@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <nav>
       <h5>
-        <img src={ev_logo} />
+        <img src={ev_logo} alt={"EvLogo"} />
         Ev- Board
       </h5>
       <ul>
