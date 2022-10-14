@@ -6,6 +6,9 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _mongoose = require("mongoose");
 var boardSchema = new _mongoose.Schema({
+  userid: {
+    type: String
+  },
   boardName: {
     type: String
   },
@@ -17,7 +20,18 @@ var boardSchema = new _mongoose.Schema({
   },
   description: {
     type: String
-  }
+  },
+  cards: [{
+    cardId: {
+      type: String
+    },
+    sectionName: {
+      type: String
+    },
+    cardDescription: {
+      type: String
+    }
+  }]
 }, {
   timestamps: true
 });

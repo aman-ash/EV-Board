@@ -8,7 +8,10 @@ exports.newUserValidator = void 0;
 var _joi = _interopRequireDefault(require("@hapi/joi"));
 var newUserValidator = function newUserValidator(req, res, next) {
   var schema = _joi["default"].object({
-    name: _joi["default"].string().min(4).required()
+    firstname: _joi["default"].string().min(4).required(),
+    lastname: _joi["default"].string().min(4).required(),
+    email: _joi["default"].string().email().min(5).max(50).required(),
+    password: _joi["default"].string().min(8).max(50).required()
   });
   var _schema$validate = schema.validate(req.body),
     error = _schema$validate.error,

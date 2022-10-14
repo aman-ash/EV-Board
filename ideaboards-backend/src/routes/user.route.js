@@ -1,15 +1,10 @@
 import express from 'express';
 import * as userController from '../controllers/user.controller';
-
+import { newUserValidator } from '../validators/user.validator';
 const router = express.Router();
 
-//route to get all board
-router.get('/getAllBoard', userController.getAllBoard);
-
-//route to create a new board
-router.post('/newBoard', userController.newBoard);
-
-//route to get a board by id
-router.get('/getBoard/:_id', userController.getBoard);
+//route to create a new user
+router.post('/register', newUserValidator, userController.newUser);
+router.post('/login', userController.login);
 
 export default router;

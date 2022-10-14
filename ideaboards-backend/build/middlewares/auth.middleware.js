@@ -19,43 +19,42 @@ var _jsonwebtoken = _interopRequireDefault(require("jsonwebtoken"));
  */
 var userAuth = /*#__PURE__*/function () {
   var _ref = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(req, res, next) {
-    var bearerToken, _yield$jwt$verify, user;
+    var bearerToken, user;
     return _regenerator["default"].wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
             _context.prev = 0;
-            bearerToken = req.header('Authorization');
+            bearerToken = req.headers['token'];
+            console.log(bearerToken);
             if (bearerToken) {
-              _context.next = 4;
+              _context.next = 5;
               break;
             }
             throw {
               code: _httpStatusCodes["default"].BAD_REQUEST,
               message: 'Authorization token is required'
             };
-          case 4:
-            bearerToken = bearerToken.split(' ')[1];
+          case 5:
             _context.next = 7;
-            return _jsonwebtoken["default"].verify(bearerToken, 'your-secret-key');
+            return _jsonwebtoken["default"].verify(bearerToken, process.env.SECRET_KEY);
           case 7:
-            _yield$jwt$verify = _context.sent;
-            user = _yield$jwt$verify.user;
-            res.locals.user = user;
-            res.locals.token = bearerToken;
+            user = _context.sent;
+            req.body.userid = user.id;
+            console.log(req.body.userid);
             next();
-            _context.next = 17;
+            _context.next = 16;
             break;
-          case 14:
-            _context.prev = 14;
+          case 13:
+            _context.prev = 13;
             _context.t0 = _context["catch"](0);
             next(_context.t0);
-          case 17:
+          case 16:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[0, 14]]);
+    }, _callee, null, [[0, 13]]);
   }));
   return function userAuth(_x, _x2, _x3) {
     return _ref.apply(this, arguments);

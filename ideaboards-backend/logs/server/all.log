@@ -15,3 +15,199 @@ info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2022-10-13T0
 info: Connected to the database. {"timestamp":"2022-10-13T05:48:26.308Z"}
 info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2022-10-13T05:52:50.304Z"}
 info: Connected to the database. {"timestamp":"2022-10-13T05:52:50.319Z"}
+info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2022-10-13T06:33:11.765Z"}
+info: Connected to the database. {"timestamp":"2022-10-13T06:33:11.787Z"}
+info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2022-10-13T09:48:50.607Z"}
+info: Connected to the database. {"timestamp":"2022-10-13T09:48:50.628Z"}
+error: 
+    status - 500 
+    message - ValidationError: "firstname" is required 
+    url - /api/v1/users/register 
+    method - POST 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-13T09:57:28.232Z"}
+info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2022-10-14T04:12:50.222Z"}
+info: Connected to the database. {"timestamp":"2022-10-14T04:12:50.241Z"}
+error: 
+      status - 400
+      message - Authorization token is required 
+      url - /api/v1/boards/newboard 
+      method - POST 
+      IP - ::ffff:127.0.0.1
+     {"timestamp":"2022-10-14T04:12:53.457Z"}
+error: 
+    status - 500 
+    message - ValidationError: "lastname" is required 
+    url - /api/v1/users/register 
+    method - POST 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-14T04:17:49.032Z"}
+error: 
+    status - 500 
+    message - ValidationError: "email" must be a valid email 
+    url - /api/v1/users/register 
+    method - POST 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-14T04:17:56.830Z"}
+error: 
+    status - 500 
+    message - ValidationError: "firstname" is required 
+    url - /api/v1/users/register 
+    method - POST 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-14T04:18:20.448Z"}
+error: 
+      status - 400
+      message - Authorization token is required 
+      url - /api/v1/boards/getAllBoard 
+      method - GET 
+      IP - ::ffff:127.0.0.1
+     {"timestamp":"2022-10-14T04:18:59.802Z"}
+info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2022-10-14T04:28:11.265Z"}
+info: Connected to the database. {"timestamp":"2022-10-14T04:28:11.281Z"}
+error: 
+    status - 500 
+    message - ReferenceError: Note is not defined
+    at _callee$ (/Users/ashish.saini/EV-Board/ideaboards-backend/build/services/board.service.js:20:13)
+    at tryCatch (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at /Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:27:7
+    at new Promise (<anonymous>)
+    at Object.<anonymous> (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:19:12)
+    at Object.getAllBoard (/Users/ashish.saini/EV-Board/ideaboards-backend/build/services/board.service.js:40:17)
+    at _callee$ (/Users/ashish.saini/EV-Board/ideaboards-backend/build/controllers/board.controller.js:30:32)
+    at tryCatch (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9) 
+    url - /api/v1/boards/getAllBoard 
+    method - GET 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-14T04:28:48.138Z"}
+error: 
+    status - 500 
+    message - ReferenceError: Note is not defined
+    at _callee$ (/Users/ashish.saini/EV-Board/ideaboards-backend/build/services/board.service.js:20:13)
+    at tryCatch (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at /Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:27:7
+    at new Promise (<anonymous>)
+    at Object.<anonymous> (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:19:12)
+    at Object.getAllBoard (/Users/ashish.saini/EV-Board/ideaboards-backend/build/services/board.service.js:40:17)
+    at _callee$ (/Users/ashish.saini/EV-Board/ideaboards-backend/build/controllers/board.controller.js:30:32)
+    at tryCatch (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9) 
+    url - /api/v1/boards/getAllBoard 
+    method - GET 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-14T04:29:35.374Z"}
+info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2022-10-14T04:30:25.402Z"}
+info: Connected to the database. {"timestamp":"2022-10-14T04:30:25.436Z"}
+error: 
+    status - 500 
+    message - TypeError: Cannot read property 'userid' of undefined
+    at _callee$ (/Users/ashish.saini/EV-Board/ideaboards-backend/build/services/board.service.js:21:28)
+    at tryCatch (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at /Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:27:7
+    at new Promise (<anonymous>)
+    at Object.<anonymous> (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:19:12)
+    at Object.getAllBoard (/Users/ashish.saini/EV-Board/ideaboards-backend/build/services/board.service.js:40:17)
+    at _callee$ (/Users/ashish.saini/EV-Board/ideaboards-backend/build/controllers/board.controller.js:30:32)
+    at tryCatch (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9) 
+    url - /api/v1/boards/getAllBoard 
+    method - GET 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-14T04:30:31.419Z"}
+info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2022-10-14T04:32:14.970Z"}
+info: Connected to the database. {"timestamp":"2022-10-14T04:32:14.989Z"}
+error: 
+    status - 500 
+    message - TypeError: Cannot read property 'userid' of undefined
+    at _callee$ (/Users/ashish.saini/EV-Board/ideaboards-backend/build/services/board.service.js:21:28)
+    at tryCatch (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at /Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:27:7
+    at new Promise (<anonymous>)
+    at Object.<anonymous> (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:19:12)
+    at Object.getAllBoard (/Users/ashish.saini/EV-Board/ideaboards-backend/build/services/board.service.js:40:17)
+    at _callee$ (/Users/ashish.saini/EV-Board/ideaboards-backend/build/controllers/board.controller.js:30:32)
+    at tryCatch (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9) 
+    url - /api/v1/boards/getAllBoard 
+    method - GET 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-14T04:32:16.964Z"}
+info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2022-10-14T04:33:25.300Z"}
+info: Connected to the database. {"timestamp":"2022-10-14T04:33:25.314Z"}
+error: 
+    status - 500 
+    message - TypeError: Cannot read property 'userid' of undefined
+    at _callee$ (/Users/ashish.saini/EV-Board/ideaboards-backend/build/services/board.service.js:21:28)
+    at tryCatch (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at /Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:27:7
+    at new Promise (<anonymous>)
+    at Object.<anonymous> (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:19:12)
+    at Object.getAllBoard (/Users/ashish.saini/EV-Board/ideaboards-backend/build/services/board.service.js:40:17)
+    at _callee$ (/Users/ashish.saini/EV-Board/ideaboards-backend/build/controllers/board.controller.js:30:32)
+    at tryCatch (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9) 
+    url - /api/v1/boards/getAllBoard 
+    method - GET 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-14T04:33:29.844Z"}
+error: 
+    status - 500 
+    message - TypeError: Cannot read property 'userid' of undefined
+    at _callee$ (/Users/ashish.saini/EV-Board/ideaboards-backend/build/services/board.service.js:21:28)
+    at tryCatch (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at /Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:27:7
+    at new Promise (<anonymous>)
+    at Object.<anonymous> (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:19:12)
+    at Object.getAllBoard (/Users/ashish.saini/EV-Board/ideaboards-backend/build/services/board.service.js:40:17)
+    at _callee$ (/Users/ashish.saini/EV-Board/ideaboards-backend/build/controllers/board.controller.js:30:32)
+    at tryCatch (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/ashish.saini/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9) 
+    url - /api/v1/boards/getAllBoard 
+    method - GET 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-14T04:36:01.725Z"}
+info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2022-10-14T04:42:15.949Z"}
+info: Connected to the database. {"timestamp":"2022-10-14T04:42:15.966Z"}

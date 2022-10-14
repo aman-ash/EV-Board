@@ -5,7 +5,7 @@ var _typeof = require("@babel/runtime/helpers/typeof");
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.newBoard = exports.getBoard = exports.getAllBoard = void 0;
+exports.newUser = exports.login = exports.getUser = exports.getAllUsers = void 0;
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 var _httpStatusCodes = _interopRequireDefault(require("http-status-codes"));
@@ -13,12 +13,12 @@ var UserService = _interopRequireWildcard(require("../services/user.service"));
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 /**
- * Controller to get all board available
+ * Controller to get all users available
  * @param  {object} req - request object
  * @param {object} res - response object
  * @param {Function} next
  */
-var getAllBoard = /*#__PURE__*/function () {
+var getAllUsers = /*#__PURE__*/function () {
   var _ref = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(req, res, next) {
     var data;
     return _regenerator["default"].wrap(function _callee$(_context) {
@@ -27,13 +27,13 @@ var getAllBoard = /*#__PURE__*/function () {
           case 0:
             _context.prev = 0;
             _context.next = 3;
-            return UserService.getAllBoard();
+            return UserService.getAllUsers();
           case 3:
             data = _context.sent;
             res.status(_httpStatusCodes["default"].OK).json({
               code: _httpStatusCodes["default"].OK,
               data: data,
-              message: 'All Board fetched successfully'
+              message: 'All users fetched successfully'
             });
             _context.next = 10;
             break;
@@ -48,19 +48,19 @@ var getAllBoard = /*#__PURE__*/function () {
       }
     }, _callee, null, [[0, 7]]);
   }));
-  return function getAllBoard(_x, _x2, _x3) {
+  return function getAllUsers(_x, _x2, _x3) {
     return _ref.apply(this, arguments);
   };
 }();
 
 /**
- * Controller to get a single board
+ * Controller to get a single user
  * @param  {object} req - request object
  * @param {object} res - response object
  * @param {Function} next
  */
-exports.getAllBoard = getAllBoard;
-var getBoard = /*#__PURE__*/function () {
+exports.getAllUsers = getAllUsers;
+var getUser = /*#__PURE__*/function () {
   var _ref2 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee2(req, res, next) {
     var data;
     return _regenerator["default"].wrap(function _callee2$(_context2) {
@@ -69,13 +69,13 @@ var getBoard = /*#__PURE__*/function () {
           case 0:
             _context2.prev = 0;
             _context2.next = 3;
-            return UserService.getBoard(req.params._id);
+            return UserService.getUser(req.params._id);
           case 3:
             data = _context2.sent;
             res.status(_httpStatusCodes["default"].OK).json({
               code: _httpStatusCodes["default"].OK,
               data: data,
-              message: 'Board fetched successfully'
+              message: 'User fetched successfully'
             });
             _context2.next = 10;
             break;
@@ -90,20 +90,20 @@ var getBoard = /*#__PURE__*/function () {
       }
     }, _callee2, null, [[0, 7]]);
   }));
-  return function getBoard(_x4, _x5, _x6) {
+  return function getUser(_x4, _x5, _x6) {
     return _ref2.apply(this, arguments);
   };
 }();
 
 /**
- * Controller to create a new Board
+ * Controller to create a new user
  * @param  {object} req - request object
  * @param {object} res - response object
  * @param {Function} next
  */
-exports.getBoard = getBoard;
-var newBoard = /*#__PURE__*/function () {
-  var _ref3 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee3(req, res, next) {
+exports.getUser = getUser;
+var newUser = /*#__PURE__*/function () {
+  var _ref3 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee3(req, res) {
     var data;
     return _regenerator["default"].wrap(function _callee3$(_context3) {
       while (1) {
@@ -111,20 +111,23 @@ var newBoard = /*#__PURE__*/function () {
           case 0:
             _context3.prev = 0;
             _context3.next = 3;
-            return UserService.newBoard(req.body);
+            return UserService.newUser(req.body);
           case 3:
             data = _context3.sent;
             res.status(_httpStatusCodes["default"].CREATED).json({
               code: _httpStatusCodes["default"].CREATED,
               data: data,
-              message: 'Board created successfully'
+              message: 'User created successfully'
             });
             _context3.next = 10;
             break;
           case 7:
             _context3.prev = 7;
             _context3.t0 = _context3["catch"](0);
-            next(_context3.t0);
+            res.status(_httpStatusCodes["default"].BAD_REQUEST).json({
+              code: _httpStatusCodes["default"].BAD_REQUEST,
+              message: "".concat(_context3.t0)
+            });
           case 10:
           case "end":
             return _context3.stop();
@@ -132,8 +135,47 @@ var newBoard = /*#__PURE__*/function () {
       }
     }, _callee3, null, [[0, 7]]);
   }));
-  return function newBoard(_x7, _x8, _x9) {
+  return function newUser(_x7, _x8) {
     return _ref3.apply(this, arguments);
   };
 }();
-exports.newBoard = newBoard;
+exports.newUser = newUser;
+var login = /*#__PURE__*/function () {
+  var _ref4 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee4(req, res) {
+    var data;
+    return _regenerator["default"].wrap(function _callee4$(_context4) {
+      while (1) {
+        switch (_context4.prev = _context4.next) {
+          case 0:
+            _context4.prev = 0;
+            _context4.next = 3;
+            return UserService.login(req.body);
+          case 3:
+            data = _context4.sent;
+            console.log('login token', data);
+            res.status(_httpStatusCodes["default"].OK).json({
+              code: _httpStatusCodes["default"].OK,
+              data: data,
+              message: 'login successfull'
+            });
+            _context4.next = 11;
+            break;
+          case 8:
+            _context4.prev = 8;
+            _context4.t0 = _context4["catch"](0);
+            res.status(_httpStatusCodes["default"].BAD_REQUEST).json({
+              code: _httpStatusCodes["default"].BAD_REQUEST,
+              message: "".concat(_context4.t0)
+            });
+          case 11:
+          case "end":
+            return _context4.stop();
+        }
+      }
+    }, _callee4, null, [[0, 8]]);
+  }));
+  return function login(_x9, _x10) {
+    return _ref4.apply(this, arguments);
+  };
+}();
+exports.login = login;

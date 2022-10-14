@@ -4,3 +4,17 @@ info: ::ffff:127.0.0.1 - - [13/Oct/2022:05:55:42 +0000] "GET /api/v1/users/getBo
 
 info: ::ffff:127.0.0.1 - - [13/Oct/2022:05:55:43 +0000] "GET /api/v1/users/getBoard/6347a2f1fae969b7367a2343 HTTP/1.1" 200 249 "-" "Thunder Client (https://www.thunderclient.com)"
 
+info: ::ffff:127.0.0.1 - - [13/Oct/2022:06:33:34 +0000] "POST /api/v1/users/newBoard HTTP/1.1" 201 250 "-" "Thunder Client (https://www.thunderclient.com)"
+
+info: ::ffff:127.0.0.1 - - [13/Oct/2022:09:51:27 +0000] "POST /api/v1/users/register HTTP/1.1" 201 327 "-" "Thunder Client (https://www.thunderclient.com)"
+
+info: ::ffff:127.0.0.1 - - [13/Oct/2022:09:52:22 +0000] "POST /api/v1/users/login HTTP/1.1" 200 247 "-" "Thunder Client (https://www.thunderclient.com)"
+
+info: ::ffff:127.0.0.1 - - [13/Oct/2022:09:57:00 +0000] "POST /api/v1/users/register HTTP/1.1" 400 50 "-" "Thunder Client (https://www.thunderclient.com)"
+
+info: ::ffff:127.0.0.1 - - [13/Oct/2022:09:57:13 +0000] "POST /api/v1/users/register HTTP/1.1" 201 326 "-" "Thunder Client (https://www.thunderclient.com)"
+
+info: ::ffff:127.0.0.1 - - [13/Oct/2022:09:57:28 +0000] "POST /api/v1/users/register HTTP/1.1" 500 60 "-" "Thunder Client (https://www.thunderclient.com)"
+
+info: ::ffff:127.0.0.1 - - [13/Oct/2022:09:57:36 +0000] "POST /api/v1/users/login HTTP/1.1" 200 247 "-" "Thunder Client (https://www.thunderclient.com)"
+

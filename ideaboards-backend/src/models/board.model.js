@@ -2,6 +2,9 @@ import { Schema, model } from 'mongoose';
 
 const boardSchema = new Schema(
   {
+    userid: {
+      type: String
+    },
     boardName: {
       type: String
     },
@@ -13,7 +16,20 @@ const boardSchema = new Schema(
     },
     description: {
       type: String
-    }
+    },
+    cards: [
+      {
+        cardId: {
+          type: String
+        },
+        sectionName: {
+          type: String
+        },
+        cardDescription: {
+          type: String
+        }
+      }
+    ]
   },
   {
     timestamps: true

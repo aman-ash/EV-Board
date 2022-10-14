@@ -9,6 +9,11 @@
             "date": 1665640062942,
             "name": "logs/server/daily/2022-10-13.log",
             "hash": "b60a0812b5916b4cca3ff9c81a5d52cc717f0ed16493897d2ea58c4131e33de5"
+        },
+        {
+            "date": 1665720770195,
+            "name": "logs/server/daily/2022-10-14.log",
+            "hash": "c0298bd5848a7a67a2565046fea20209b7a5ab9c196b283ed3db36438571e1c1"
         }
     ],
     "hashType": "sha256"
