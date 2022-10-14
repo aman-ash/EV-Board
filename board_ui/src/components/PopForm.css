@@ -90,28 +90,37 @@
 
 .eye-icon{
   position: absolute;
-  top:74%;
-  left: 65%;
+  top:63%;
+  left: 75%;
   cursor: pointer;
   z-index: 1;
 }
-.question-mark{
-  margin-left: 3px;
+
+.with-tooltip {
+  position: relative;
+  padding: 3px;
 }
 
-.question-mark:hover .tooltiptext{
-  cursor: pointer;
-  visibility: visible;
-}
-.tooltiptext {
+.with-tooltip::after {
+  content: attr(data-tooltip-content);
+  padding: 8px;
+  border-radius: 4px;
+  position: absolute;
+  color: white;
+  bottom: 115%;
+  right: 50%;
+  left: 50%;
+  width: max-content;
+  background-color: gray;
+  opacity: 0;
+  font-size: 0.8rem;
   visibility: hidden;
-  width: 200px;
-  background-color: lightgray;
-  color: rgb(84, 77, 77);
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px;
-  z-index: 2;
-  font-size: 12px;
-  
+  transform: translate(-22%, 18px) scale(0.8);
+  transition: visibility, opacity, transform 200ms;
+}
+
+.with-tooltip:hover::after {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-22%, 0);
 }

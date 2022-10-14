@@ -1,5 +1,5 @@
 
-boardData = {
+export const boardData = {
    boardId: 1,
     boardName:'One',
     Sections: ["one", "two"],
@@ -21,8 +21,7 @@ boardData = {
             SectionName:"Three",
              Description:"xyz",
          }
-    ]
-    ,
+    ],
 };
 // console.log(boardData.Description);
 // Cards = [
