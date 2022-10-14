@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
 .modalContainer {
@@ -79,4 +80,38 @@
   background-color: skyblue;
   color: white;
   text-align: center;
+}
+
+.errors{
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.eye-icon{
+  position: absolute;
+  top:74%;
+  left: 65%;
+  cursor: pointer;
+  z-index: 1;
+}
+.question-mark{
+  margin-left: 3px;
+}
+
+.question-mark:hover .tooltiptext{
+  cursor: pointer;
+  visibility: visible;
+}
+.tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: lightgray;
+  color: rgb(84, 77, 77);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  z-index: 2;
+  font-size: 12px;
+  
 }
