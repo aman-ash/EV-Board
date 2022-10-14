@@ -4,7 +4,7 @@ import ev_logo from "./ev-logo.png";
 
 export default function Navbar() {
   return (
-    <nav className="nav">
+    <div className="nav">
       <h5>
         <img src={ev_logo} alt={"EvLogo"} />
         Ev- Board
@@ -14,6 +14,6 @@ export default function Navbar() {
           <a href="#">Login</a>
         </li>
       </ul>
-    </nav>
+    </div>
   );
 }

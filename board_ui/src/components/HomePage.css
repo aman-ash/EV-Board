@@ -9,9 +9,7 @@
   #option1{
     margin-left: 20px;
   }
-div{
-    color:blue;
-}
+
 .typed-out {
     color:rgb(214, 214, 226);
     overflow: hidden;
@@ -30,7 +28,8 @@ div{
   }
   
   .container2 {
-    display: inline-block;
+   display: inline-block;
+   z-index: 0;
   }
   
 
