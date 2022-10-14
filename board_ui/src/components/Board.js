@@ -5,5 +5,6 @@ export default function Board() {
     <div className='title'>
       Welcome to the EvBoardZ
     </div>
+    
   )
 }

@@ -10,6 +10,7 @@ export default function Home() {
   return (
     <>
       <div>
+        
         <video className="video-component" src={bg1} autoPlay loop muted />
 
         <button

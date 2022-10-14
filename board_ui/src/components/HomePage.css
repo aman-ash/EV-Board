@@ -1,0 +1,38 @@
+.options {
+    position: absolute;
+    left:45%;
+    top: 85%;
+  }
+  #option1{
+    margin-right: 20px;
+  }
+  #option1{
+    margin-left: 20px;
+  }
+div{
+    color:blue;
+}
+.typed-out {
+    color:rgb(214, 214, 226);
+    overflow: hidden;
+    position:absolute;
+    left:43%;
+    border-right: .15em solid #151845;
+    font-family: "Gill Sans", sans-serif;
+    white-space: nowrap;
+    font-size: 2rem;
+    width: 0;
+    animation: typing 10s steps(20, end) forwards;
+  }
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  .container2 {
+    display: inline-block;
+  }
+  
+
+ 
+    
