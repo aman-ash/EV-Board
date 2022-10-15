@@ -9,7 +9,6 @@
   #option1{
     margin-left: 20px;
   }
-
 .typed-out {
     color:rgb(214, 214, 226);
     overflow: hidden;
@@ -20,7 +19,7 @@
     white-space: nowrap;
     font-size: 2rem;
     width: 0;
-    animation: typing 10s steps(20, end) forwards;
+    animation: typing 10s steps(100, end) forwards;
   }
   @keyframes typing {
     from { width: 0 }

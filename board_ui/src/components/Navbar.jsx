@@ -9,11 +9,6 @@ export default function Navbar() {
         <img src={ev_logo} alt={"EvLogo"} />
         Ev- Board
       </h5>
-      <ul>
-        <li>
-          <a href="#">Login</a>
-        </li>
-      </ul>
     </div>
   );
 }
