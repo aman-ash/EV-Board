@@ -11,15 +11,50 @@ function HomePage() {
   const [isSubmitted, setSubmitted] = useState(false)
   const props = {setRegFormOpen, setSubmitted}
   return (
+      <div>
+           <div className="container"> 
+    <div className="main"></div> 
     <div>
+     
+      <div class="moon">
+          <div className="crater crater-1"></div>
+          <div className="crater crater-2"></div>
+          <div className="crater crater-3"></div>
+          <div className="crater crater-4"></div>
+          <div className="crater crater-5"></div>
+          <div className="shadow"></div>
+          <div className="eye eye-l"></div>
+          <div className="eye eye-r"></div>
+          <div className="mouth"></div>
+          <div className="blush blush-1"></div>
+          <div className="blush blush-2"></div>
+      </div>
+      <div className="orbit">
+          <div className="rocket">
+              <div className="window"></div>
+          </div>
+      </div>
+      <div className="orbit">
+          <div className="rocket">
+              <div className="window"></div>
+          </div>
+      </div>
+      <div className="orbit">
+          <div className="rocket">
+              <div className="window"></div>
+          </div>
+      </div>
+  </div>
+   
+    </div>
       <div className="container2">
-        <div class="typed-out">Plan Create Accelerate...</div>
+        <div className="typed-out">Plan Create Accelerate...</div>
       </div>
       <div className="options">
         <button
           id="option1"
           type="button"
-          class="btn btn-outline-info"
+          className="btn btn-outline-info"
           onClick={() => {
             setLoginFormOpen(true);
           }}
@@ -29,7 +64,7 @@ function HomePage() {
         <button
           id="option2"
           type="button"
-          class="btn btn-outline-info"
+          className="btn btn-outline-info"
           onClick={() => {
             setRegFormOpen(true);
           }}
