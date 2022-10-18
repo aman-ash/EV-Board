@@ -9,7 +9,6 @@
   #option1{
     margin-left: 20px;
   }
-
 .typed-out {
     color:rgb(214, 214, 226);
     overflow: hidden;
@@ -20,7 +19,8 @@
     white-space: nowrap;
     font-size: 2rem;
     width: 0;
-    animation: typing 10s steps(20, end) forwards;
+    animation: typing 10s steps(100, end) forwards;
+
   }
   @keyframes typing {
     from { width: 0 }
@@ -31,7 +31,261 @@
    display: inline-block;
    z-index: 0;
   }
+  body{
+
+    background-color: #151845;
+    padding: 0;
+    margin: 0;
+    
+  }
   
+  .container{
+    background-color: #151845;
+    margin:0;
+    left: 0;
+    right: 0;
+    top: 0%;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .moon{
+    background-color: #39beff;
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+  
+  .crater{
+    background-color: #31b4ff;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .crater:before{
+    content: "";
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    box-shadow: -5px 0 0 2px #1ca4f9;
+    top: 2px;
+    left: 7px;
+  }
+  
+  .crater-1{
+    top: 27px;
+    left: 90px;
+    transform: scale(0.9);
+  }
+  
+  .crater-2{
+    bottom: 15px;
+    left: 61px;
+    transform: scale(0.6);
+  }
+  
+  .crater-3{
+    left: 15px;
+    transform: scale(0.75);
+  }
+  
+  .crater-4{
+    left: 107px;
+    top: 32px;
+    transform: scale(1.18);
+  }
+  
+  .crater-5{
+    left: 33px;
+    bottom: 4px;
+    transform: scale(0.65);
+  }
+  
+  .shadow{
+    height: 190px;
+    width: 190px;
+    box-shadow: 21px 0 0 5px rgba(0,0,0,0.15);
+    border-radius: 50%;
+    position: relative;
+    bottom: 157.5px;
+    right: 46px;
+  }
+  
+  .eye{
+    height: 12px;
+    width: 12px;
+    background-color: #161616;
+    position: relative;
+    border-radius: 50%;
+  }
+  
+  .eye-l{
+    bottom: 255px;
+    left: 59px;
+  }
+  
+  .eye-r{
+    bottom: 267px;
+    left: 101px;
+  }
+  
+  .mouth{
+    height: 5px;
+    width: 10px;
+    border: 3px solid #161616;
+    position: relative;
+    bottom: 262px;
+    left: 79px;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .blush{
+    height: 7.5px;
+    width: 7.5px;
+    background-color: #1ca4f9;
+    position: relative;
+    border-radius: 50%;
+  }
+  
+  .blush-1{
+    bottom: 273px;
+    left: 50px;
+  }
+  
+  .blush-2{
+    bottom: 281px;
+    left: 115px;
+  }
+  
+  .orbit{
+    height: 280px;
+    width: 280px;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    animation: spin 5s infinite linear;
+  }
+  
+  @keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+  }
+  
+  .rocket{
+    background-color: #fafcf7;
+    height: 50px;
+    width: 25px;
+    border-radius: 50% 50% 0 0;
+    position: relative;
+    left: -11px;
+    top: 115px;
+  }
+  
+  .rocket:before{
+    position: absolute;
+    content: "";
+    background-color: #39beff;
+    height: 20px;
+    width: 55px;
+    z-index: -1;
+    border-radius: 50% 50% 0 0;
+    right: -15px;
+    bottom: 0;
+  }
+  
+  .rocket:after{
+    position: absolute;
+    content: "";
+    background-color: #39beff;
+    height: 4px;
+    width: 15px;
+    border-radius: 0 0 2px 2px;
+    bottom: -4px;
+    left: 4.3px;
+  }
+  
+  .window{
+    height: 10px;
+    width: 10px;
+    background-color: #151845;
+    border: 2px solid #b8d2ec;
+    border-radius: 50%;
+    position: relative;
+    top: 17px;
+    left: 5px;
+  }
+  
+  
+  .main {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 1px;
+    width: 1px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: -38vw 1vh 2px 3px #fff, -50vw 49vh 1px 0px #fff,
+      24vw 35vh 1px 0px #fff, 32vw -5vh 3px 3px #fff, 43vw -7vh 3px 3px #fff,
+      11vw 39vh 3px 2px #fff, -38vw -10vh 2px 3px #fff, 44vw -27vh 0px 2px #fff,
+      14vw -25vh 2px 0px #fff, -6vw 11vh 2px 1px #fff, 34vw 4vh 3px 2px #fff,
+      -32vw -6vh 2px 3px #fff, -31vw 8vh 1px 3px #fff, -21vw -6vh 0px 0px #fff,
+      15vw -35vh 3px 1px #fff, -45vw -2vh 2px 1px #fff, -38vw 35vh 1px 1px #fff,
+      -21vw -5vh 3px 0px #fff, -34vw -28vh 3px 1px #fff, -13vw -4vh 3px 0px #fff,
+      -42vw -6vh 0px 2px #fff, -6vw 42vh 0px 0px #fff, 46vw -10vh 1px 3px #fff,
+      -25vw 24vh 1px 3px #fff, -22vw -29vh 0px 3px #fff, -33vw 0vh 0px 1px #fff,
+      -34vw -30vh 2px 2px #fff, 49vw -41vh 2px 0px #fff, -15vw -12vh 0px 0px #fff,
+      21vw 17vh 2px 2px #fff, 37vw -24vh 1px 3px #fff, -35vw -32vh 0px 0px #fff,
+      50vw -27vh 2px 1px #fff, 10vw 27vh 3px 0px #fff, -43vw 41vh 1px 0px #fff,
+      12vw -8vh 3px 1px #fff, 17vw -39vh 3px 1px #fff, -21vw -49vh 2px 0px #fff,
+      18vw 21vh 0px 2px #fff, 5vw 13vh 3px 2px #fff, -50vw -25vh 2px 1px #fff,
+      41vw -1vh 3px 0px #fff, 19vw 37vh 2px 0px #fff, 46vw -35vh 3px 3px #fff,
+      -1vw 34vh 2px 0px #fff, -10vw -18vh 0px 3px #fff, -8vw -41vh 3px 1px #fff,
+      19vw 43vh 2px 3px #fff, -17vw -8vh 3px 2px #fff, 9vw -24vh 1px 2px #fff,
+      -16vw 1vh 3px 2px #fff, -22vw 3vh 0px 2px #fff, 44vw -17vh 0px 0px #fff,
+      43vw 41vh 3px 0px #fff, 42vw -6vh 2px 3px #fff, 50vw -13vh 3px 0px #fff,
+      -38vw 49vh 0px 2px #fff, 34vw -29vh 0px 1px #fff, 26vw 32vh 2px 3px #fff,
+      0vw -17vh 0px 3px #fff, 1vw 9vh 1px 1px #fff, -38vw -2vh 2px 3px #fff,
+      33vw 26vh 3px 1px #fff, 32vw -22vh 3px 3px #fff, 27vw -8vh 2px 0px #fff,
+      0vw -6vh 1px 0px #fff, -30vw -29vh 1px 2px #fff, 6vw 3vh 0px 1px #fff,
+      -18vw 21vh 1px 1px #fff, -1vw -46vh 1px 1px #fff, -22vw -33vh 3px 2px #fff,
+      -25vw -18vh 0px 0px #fff, 12vw -15vh 1px 3px #fff, -25vw 45vh 0px 2px #fff,
+      -43vw -19vh 2px 0px #fff, -47vw 30vh 0px 2px #fff, 21vw -36vh 0px 0px #fff,
+      -38vw -20vh 1px 1px #fff, 15vw -36vh 2px 0px #fff, 0vw -41vh 1px 1px #fff,
+      47vw -11vh 2px 3px #fff, -44vw 0vh 0px 1px #fff, 28vw 36vh 0px 3px #fff,
+      50vw -31vh 2px 2px #fff, -4vw -7vh 1px 1px #fff, -31vw 36vh 2px 0px #fff,
+      -25vw -13vh 1px 2px #fff, -10vw -40vh 0px 2px #fff, -21vw -9vh 3px 2px #fff,
+      3vw -13vh 0px 1px #fff, 21vw -6vh 1px 1px #fff, 7vw -23vh 0px 3px #fff,
+      -1vw -4vh 0px 0px #fff, 44vw -37vh 0px 1px #fff, 27vw 43vh 0px 1px #fff,
+      -24vw 41vh 0px 2px #fff, 39vw -37vh 2px 0px #fff, -21vw 12vh 0px 2px #fff,
+      -34vw 28vh 0px 1px #fff, -3vw -3vh 2px 1px #fff;
+    animation: zoom 5s alternate infinite;
+  }
+  
+  @keyframes zoom {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.5);
+    }
+  }
 
  
     
