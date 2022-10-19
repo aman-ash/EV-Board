@@ -6,10 +6,10 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _mongoose = require("mongoose");
 var userSchema = new _mongoose.Schema({
-  firstname: {
+  firstName: {
     type: String
   },
-  lastname: {
+  lastName: {
     type: String
   },
   email: {
