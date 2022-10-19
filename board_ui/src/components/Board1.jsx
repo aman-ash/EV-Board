@@ -4,20 +4,18 @@ import { boardData } from "../DummyData";
 import { GrChapterAdd } from "react-icons/gr";
 import { v4 as uuid } from "uuid";
 
-
-
 var sectionsDictionary = {};
 const cardsFromBackend = boardData.Cards;
 const sections = boardData.Sections;
-sections.forEach(section => {
+sections.forEach((section) => {
   sectionsDictionary[section] = {};
   sectionsDictionary[section]["name"] = section;
-  sectionsDictionary[section]["items"] = []
-})
+  sectionsDictionary[section]["items"] = [];
+});
 
-cardsFromBackend.forEach(Card => {
+cardsFromBackend.forEach((Card) => {
   sectionsDictionary[Card.SectionName]["items"].push(Card);
-})
+});
 
 const onDragEnd = (result, columns, setColumns) => {
   console.log(result);
@@ -57,21 +55,20 @@ const onDragEnd = (result, columns, setColumns) => {
   }
 };
 const onClickAdd = (columnName, columns, cards, setColumns, setCards) => {
-  console.log(cards);
-  const newId = cards.length+1; 
+  const newId = cards.length + 1;
   const newCard = {
     id: newId.toString(),
     SectionName: columnName,
     Description: "",
-  }
+  };
   const column = columns[columnName];
-  column.items.forEach(item => {
+  column.items.forEach((item, index) => {
+    console.log(item);
     if (item.Description.length === 0) {
-      console.log("True");
-      return
+      columns.items.splice(index, 1);
     }
   });
-  
+
   var copiedItems = [...column.items];
   copiedItems.push(newCard);
 
@@ -79,26 +76,34 @@ const onClickAdd = (columnName, columns, cards, setColumns, setCards) => {
     ...columns,
     [columnName]: {
       ...column,
-      items:copiedItems,
+      items: copiedItems,
     },
   });
   cards.push(newCard);
   setCards(cards);
-}
-const EditCard = (event, columnName, itemId, index, cards, setCards, columns, setColumns) => {
-  
+};
+const EditCard = (
+  event,
+  columnName,
+  itemId,
+  index,
+  cards,
+  setCards,
+  columns,
+  setColumns
+) => {
   console.log(`item.id:${itemId}`);
   console.log(`index:${index}`);
   console.log(cards);
-  cards.forEach(card => {
+  cards.forEach((card) => {
     console.log(card);
     if (card.id === itemId) {
       card.Description = event.target.value;
     }
-  })
+  });
   setCards(cards);
   var column = columns[columnName];
-  column.items.forEach(item => {
+  column.items.forEach((item) => {
     if (item.id === itemId) {
       item.Description = event.target.value;
     }
@@ -107,20 +112,18 @@ const EditCard = (event, columnName, itemId, index, cards, setCards, columns, se
     ...columns,
     [columnName]: {
       ...column,
-      items:column.items,
+      items: column.items,
     },
   });
-}
+};
 
 function Test() {
   const [columns, setColumns] = useState(sectionsDictionary);
   const [cards, setCards] = useState(cardsFromBackend);
-  const [EditFormOpen, setEditFormOpen] = useState(false);
-  const [isSubmitted, setSubmitted] = useState(false)
   return (
     <div style={{ display: "flex", justifyContent: "center", height: "100%" }}>
       <DragDropContext
-        onDragEnd={(result) => onDragEnd(result, columns,setColumns)}
+        onDragEnd={(result) => onDragEnd(result, columns, setColumns)}
       >
         {Object.entries(columns).map(([columnId, column], index) => {
           return (
@@ -132,8 +135,14 @@ function Test() {
               }}
               key={columnId}
             >
-              <h2 style={{color:"white"}}>{column.name}</h2>
-              <button onClick={() => onClickAdd(column.name,columns,cards,setColumns,setCards)}><GrChapterAdd /></button>
+              <h2 style={{ color: "white" }}>{column.name}</h2>
+              <button
+                onClick={() =>
+                  onClickAdd(column.name, columns, cards, setColumns, setCards)
+                }
+              >
+                <GrChapterAdd />
+              </button>
               <div style={{ margin: 8 }}>
                 <Droppable droppableId={columnId} key={columnId}>
                   {(provided, snapshot) => {
@@ -175,19 +184,33 @@ function Test() {
                                       ...provided.draggableProps.style,
                                     }}
                                   >
-                                    <input style={{
-                                      width: 200,
-                                      minHeight: 500,
-                                      border: "#263B4A",
-                                      userSelect: "none",
-                                      padding: "0",
-                                      margin: "0 0 8px 0",
-                                      minHeight: "50px",
-                                      backgroundColor: "#456C86",
-                                      
-                                      color: "white",
-                                      
-                                    }}   onChange={(event)=> EditCard(event,column.name,item.id,index,cards,setCards,columns,setColumns) } value={item.Description} />
+                                    <input
+                                      style={{
+                                        width: 200,
+                                        minHeight: 500,
+                                        border: "#263B4A",
+                                        userSelect: "none",
+                                        padding: "0",
+                                        margin: "0 0 8px 0",
+                                        minHeight: "50px",
+                                        backgroundColor: "#456C86",
+
+                                        color: "white",
+                                      }}
+                                      onChange={(event) =>
+                                        EditCard(
+                                          event,
+                                          column.name,
+                                          item.id,
+                                          index,
+                                          cards,
+                                          setCards,
+                                          columns,
+                                          setColumns
+                                        )
+                                      }
+                                      value={item.Description}
+                                    />
                                   </div>
                                 );
                               }}
@@ -204,7 +227,6 @@ function Test() {
           );
         })}
       </DragDropContext>
-      
     </div>
   );
 }
