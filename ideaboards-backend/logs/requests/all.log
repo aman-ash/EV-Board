@@ -248,3 +248,7 @@ info: ::ffff:127.0.0.1 - - [19/Oct/2022:07:59:16 +0000] "PATCH /api/v1/boards/ad
 
 info: ::ffff:127.0.0.1 - - [19/Oct/2022:07:59:37 +0000] "PATCH /api/v1/boards/deleteCard/634f9f091a44926abd282c66 HTTP/1.1" 201 422 "-" "Thunder Client (https://www.thunderclient.com)"
 
+info: ::1 - - [19/Oct/2022:10:05:07 +0000] "POST /api/v1/users/register HTTP/1.1" 201 321 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
+
+info: ::1 - - [19/Oct/2022:10:05:29 +0000] "POST /api/v1/users/login HTTP/1.1" 200 239 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
+

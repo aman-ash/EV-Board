@@ -4,12 +4,15 @@ import "./HomePage.css";
 import RegistrationForm from "./RegistrationForm";
 import LoginForm from "./LoginForm";
 import PopupForm from "./PopupForm";
+import BoardForm from "./BoardForm"
 
 function HomePage() {
   const [RegFormOpen, setRegFormOpen] = useState(false);
   const [LoginFormOpen, setLoginFormOpen] = useState(false);
-  const [isSubmitted, setSubmitted] = useState(false)
-  const props = {setRegFormOpen, setSubmitted}
+  const [isSubmitted, setSubmitted] = useState(false);
+  const [showCreate, setShowCreate] = useState(false);
+  const [boardFormOpen, setBoardFormOpen] = useState(false)
+  const [errorMessage, setErrorMessage] = useState({})
   return (
       <div>
            <div className="container"> 
@@ -50,31 +53,48 @@ function HomePage() {
       <div className="container2">
         <div className="typed-out">Plan Create Accelerate...</div>
       </div>
-      <div className="options">
-        <button
-          id="option1"
-          type="button"
-          className="btn btn-outline-info"
-          onClick={() => {
-            setLoginFormOpen(true);
-          }}
-        >
-          Login
-        </button>
-        <button
-          id="option2"
-          type="button"
-          className="btn btn-outline-info"
-          onClick={() => {
-            setRegFormOpen(true);
-          }}
-        >
-          SignUp
-        </button>
-      </div>
-      {RegFormOpen && <RegistrationForm setOpenModal={setRegFormOpen} setSubmitted={setSubmitted}/>}
-      {LoginFormOpen && <LoginForm setOpenModal={setLoginFormOpen} />}
-      {isSubmitted && <PopupForm setSubmitted={setSubmitted}/>}
+      { !showCreate && 
+        <div className="options">
+          <button
+            id="option1"
+            type="button"
+            className="btn btn-outline-info"
+            onClick={() => {
+              setLoginFormOpen(true);
+            }}
+          >
+            Login
+          </button>
+          <button
+            id="option2"
+            type="button"
+            className="btn btn-outline-info"
+            onClick={() => {
+              setRegFormOpen(true);
+            }}
+          >
+            SignUp
+          </button>
+        </div>
+      }
+      { showCreate && 
+        <div className="options">
+          <button
+            id="option1"
+            type="button"
+            className="btn btn-outline-info"
+            onClick={() => {
+              setBoardFormOpen(true);
+            }}
+          >
+            Create
+          </button>
+        </div>
+      }
+      {boardFormOpen && <BoardForm setOpenModal={setBoardFormOpen}/>}
+      {RegFormOpen && <RegistrationForm setOpenModal={setRegFormOpen} setSubmitted={setSubmitted} setErrorMessage={setErrorMessage}/>}
+      {LoginFormOpen && <LoginForm setOpenModal={setLoginFormOpen} setShowCreate={setShowCreate} setErrorMessage={setErrorMessage} />}
+      {isSubmitted && <PopupForm setSubmitted={setSubmitted} errorMessage/>}
     </div>
   );
 }

@@ -2,8 +2,9 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import "./PopForm.css";
+import { signIn } from "../service/userServices";
 
-export default function LoginForm({ setOpenModal }) {
+export default function LoginForm({ setOpenModal, setShowCreate }) {
   const {
     register,
     watch,
@@ -31,6 +32,9 @@ export default function LoginForm({ setOpenModal }) {
   }, [formState]);
 
   const onSubmit = (data) => {
+    signIn(data)
+        .then( (resp) => {console.log(resp); localStorage.setItem('token', resp.data.data); setShowCreate(true);})
+        .catch( (error) => {console.log(error)})
     setSubmitted(true);
     setOpenModal(false);
   };

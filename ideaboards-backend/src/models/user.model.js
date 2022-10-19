@@ -2,10 +2,10 @@ import { Schema, model } from 'mongoose';
 
 const userSchema = new Schema(
   {
-    firstname: {
+    firstName: {
       type: String
     },
-    lastname: {
+    lastName: {
       type: String
     },
     email: {
