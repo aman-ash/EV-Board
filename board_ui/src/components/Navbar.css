@@ -1,7 +1,5 @@
-
 .nav {
   display: flex; /* 1 */
-  justify-content: space-between; /* 2 */
   padding: 0.5rem 0.8rem; /* 3 */
   background: rgba(0, 0, 0, 0.5); /* 4 */
   width: 100%;
@@ -23,6 +21,19 @@ a {
 
 img {
   padding-right: 8px;
+}
+
+h5 {
+  margin-left: 20px;
+}
+
+.nav-item-dropdown {
+  margin-left: 80%;
+}
+
+.export-button {
+  color: blue;
+  margin-left: 20px;
 }
 
 @media only screen and (max-width: 600px) {
