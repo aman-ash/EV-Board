@@ -41,20 +41,19 @@ var userAuth = /*#__PURE__*/function () {
           case 7:
             user = _context.sent;
             req.body.userid = user.id;
-            console.log(req.body.userid);
             next();
-            _context.next = 16;
+            _context.next = 15;
             break;
-          case 13:
-            _context.prev = 13;
+          case 12:
+            _context.prev = 12;
             _context.t0 = _context["catch"](0);
             next(_context.t0);
-          case 16:
+          case 15:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[0, 13]]);
+    }, _callee, null, [[0, 12]]);
   }));
   return function userAuth(_x, _x2, _x3) {
     return _ref.apply(this, arguments);

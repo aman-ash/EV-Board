@@ -18,7 +18,7 @@ import morgan from 'morgan';
 
 const app = express();
 const host = process.env.APP_HOST;
-const port = 3002;
+const port = 3003;
 const api_version = process.env.API_VERSION;
 
 app.use(cors());
