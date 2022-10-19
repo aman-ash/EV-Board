@@ -67,6 +67,7 @@ const onClickAdd = (columnName, columns, cards, setColumns, setCards) => {
   column.items.forEach((item, index) => {
     console.log(item);
     if (item.Description.length === 0) {
+      newCard.id = item.id;
       column.items.splice(index, 1);
     }
   });
@@ -152,17 +153,6 @@ const onClickEdit = (
 ) => {
   console.log("Edit button clicked");
   console.log(cards);
-  // cards.forEach((card) => {
-  //   console.log(card);
-  //   if (card.id === itemId) {
-  //     if (card.edit === false) {
-  //       card.edit = true;
-  //     } else {
-  //       card.edit = false;
-  //     }
-  //   }
-  // });
-  // setCards(cards);
   var column = columns[columnName];
   column.items.forEach((item, index) => {
     if (item.id === itemId) {
@@ -197,8 +187,6 @@ const renderElement = (
   column.items.forEach((item, index) => {
     if (item.id === itemId) {
       if (item.edit === true) {
-        elementRendered = "editable";
-        console.log(`${item.Description} is ${elementRendered}`);
         elementRendered = (
           <input
             style={{
@@ -229,8 +217,6 @@ const renderElement = (
           />
         );
       } else {
-        elementRendered = "non-editable";
-        console.log(`${item.Description} is ${elementRendered}`);
         elementRendered = <div>{item.Description}</div>;
       }
     }
