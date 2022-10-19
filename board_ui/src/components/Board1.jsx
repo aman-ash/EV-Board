@@ -14,6 +14,7 @@ sections.forEach((section) => {
 });
 
 cardsFromBackend.forEach((Card) => {
+  Card.edit = false;
   sectionsDictionary[Card.SectionName]["items"].push(Card);
 });
 
@@ -60,12 +61,13 @@ const onClickAdd = (columnName, columns, cards, setColumns, setCards) => {
     id: newId.toString(),
     SectionName: columnName,
     Description: "",
+    edit: false,
   };
   const column = columns[columnName];
   column.items.forEach((item, index) => {
     console.log(item);
     if (item.Description.length === 0) {
-      columns.items.splice(index, 1);
+      column.items.splice(index, 1);
     }
   });
 
@@ -117,9 +119,129 @@ const EditCard = (
   });
 };
 
+const onClickDelete = (
+  columnName,
+  itemId,
+  columns,
+  cards,
+  setColumns,
+  setCards
+) => {
+  var column = columns[columnName];
+  column.items.forEach((item, index) => {
+    if (item.id === itemId) {
+      column.items.splice(index, 1);
+    }
+  });
+  setColumns({
+    ...columns,
+    [columnName]: {
+      ...column,
+      items: column.items,
+    },
+  });
+};
+
+const onClickEdit = (
+  columnName,
+  itemId,
+  columns,
+  cards,
+  setColumns,
+  setCards
+) => {
+  console.log("Edit button clicked");
+  console.log(cards);
+  // cards.forEach((card) => {
+  //   console.log(card);
+  //   if (card.id === itemId) {
+  //     if (card.edit === false) {
+  //       card.edit = true;
+  //     } else {
+  //       card.edit = false;
+  //     }
+  //   }
+  // });
+  // setCards(cards);
+  var column = columns[columnName];
+  column.items.forEach((item, index) => {
+    if (item.id === itemId) {
+      if (item.edit === false) {
+        item.edit = true;
+      } else {
+        item.edit = false;
+        if (item.Description.length === 0) {
+          column.items.splice(index, 1);
+        }
+      }
+    }
+  });
+  setColumns({
+    ...columns,
+    [columnName]: {
+      ...column,
+      items: column.items,
+    },
+  });
+};
+const renderElement = (
+  columnName,
+  itemId,
+  columns,
+  cards,
+  setColumns,
+  setCards
+) => {
+  var column = columns[columnName];
+  var elementRendered;
+  column.items.forEach((item, index) => {
+    if (item.id === itemId) {
+      if (item.edit === true) {
+        elementRendered = "editable";
+        console.log(`${item.Description} is ${elementRendered}`);
+        elementRendered = (
+          <input
+            style={{
+              width: 200,
+              minHeight: 500,
+              border: "#263B4A",
+              userSelect: "none",
+              padding: "0",
+              margin: "0 0 8px 0",
+              minHeight: "50px",
+              backgroundColor: "#456C86",
+
+              color: "white",
+            }}
+            onChange={(event) =>
+              EditCard(
+                event,
+                columnName,
+                itemId,
+                index,
+                cards,
+                setCards,
+                columns,
+                setColumns
+              )
+            }
+            value={item.Description}
+          />
+        );
+      } else {
+        elementRendered = "non-editable";
+        console.log(`${item.Description} is ${elementRendered}`);
+        elementRendered = <div>{item.Description}</div>;
+      }
+    }
+  });
+  return <div>{elementRendered}</div>;
+};
+
 function Test() {
   const [columns, setColumns] = useState(sectionsDictionary);
   const [cards, setCards] = useState(cardsFromBackend);
+  console.log(columns);
   return (
     <div style={{ display: "flex", justifyContent: "center", height: "100%" }}>
       <DragDropContext
@@ -184,33 +306,44 @@ function Test() {
                                       ...provided.draggableProps.style,
                                     }}
                                   >
-                                    <input
-                                      style={{
-                                        width: 200,
-                                        minHeight: 500,
-                                        border: "#263B4A",
-                                        userSelect: "none",
-                                        padding: "0",
-                                        margin: "0 0 8px 0",
-                                        minHeight: "50px",
-                                        backgroundColor: "#456C86",
-
-                                        color: "white",
-                                      }}
-                                      onChange={(event) =>
-                                        EditCard(
-                                          event,
+                                    <button
+                                      onClick={() =>
+                                        onClickDelete(
                                           column.name,
                                           item.id,
-                                          index,
-                                          cards,
-                                          setCards,
                                           columns,
-                                          setColumns
+                                          cards,
+                                          setColumns,
+                                          setCards
                                         )
                                       }
-                                      value={item.Description}
-                                    />
+                                      className="btn"
+                                    >
+                                      <i class="fa fa-trash"></i>
+                                    </button>
+                                    <button
+                                      onClick={() =>
+                                        onClickEdit(
+                                          column.name,
+                                          item.id,
+                                          columns,
+                                          cards,
+                                          setColumns,
+                                          setCards
+                                        )
+                                      }
+                                      className="btn"
+                                    >
+                                      <i class="fa fa-edit"></i>
+                                    </button>
+                                    {renderElement(
+                                      column.name,
+                                      item.id,
+                                      columns,
+                                      cards,
+                                      setColumns,
+                                      setCards
+                                    )}
                                   </div>
                                 );
                               }}
