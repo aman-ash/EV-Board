@@ -1,0 +1,159 @@
+info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2022-10-19T04:36:40.342Z"}
+info: Connected to the database. {"timestamp":"2022-10-19T04:36:40.374Z"}
+info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2022-10-19T07:05:02.606Z"}
+info: Connected to the database. {"timestamp":"2022-10-19T07:05:02.622Z"}
+info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2022-10-19T07:06:01.997Z"}
+info: Connected to the database. {"timestamp":"2022-10-19T07:06:02.016Z"}
+info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2022-10-19T07:06:51.085Z"}
+info: Connected to the database. {"timestamp":"2022-10-19T07:06:51.100Z"}
+info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2022-10-19T07:07:06.730Z"}
+info: Connected to the database. {"timestamp":"2022-10-19T07:07:06.745Z"}
+error: 
+    status - 500 
+    message - TypeError: temp.push is not a function
+    at _callee2$ (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:59:20)
+    at tryCatch (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/getAllBoardName 
+    method - GET 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-19T07:07:12.009Z"}
+info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2022-10-19T07:07:46.163Z"}
+info: Connected to the database. {"timestamp":"2022-10-19T07:07:46.180Z"}
+info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2022-10-19T07:09:20.251Z"}
+info: Connected to the database. {"timestamp":"2022-10-19T07:09:20.266Z"}
+info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2022-10-19T07:12:01.924Z"}
+info: Connected to the database. {"timestamp":"2022-10-19T07:12:01.939Z"}
+info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2022-10-19T07:31:51.474Z"}
+info: Connected to the database. {"timestamp":"2022-10-19T07:31:51.489Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to Number failed for value "NaN" (type number) at path "numberOfCards"
+    at model.Query.exec (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/addCard/634f9f091a44926abd282c66 
+    method - PATCH 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-19T07:33:47.430Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to Number failed for value "NaN" (type number) at path "numberOfCards"
+    at model.Query.exec (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/addCard/634f9f091a44926abd282c66 
+    method - PATCH 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-19T07:34:50.421Z"}
+info: Server started at http://localhost:3002/api/v1/ {"timestamp":"2022-10-19T07:35:25.081Z"}
+info: Connected to the database. {"timestamp":"2022-10-19T07:35:25.094Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to Number failed for value "NaN" (type number) at path "numberOfCards"
+    at model.Query.exec (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/addCard/634f9f091a44926abd282c66 
+    method - PATCH 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-19T07:35:30.447Z"}
+info: Connected to the database. {"timestamp":"2022-10-19T07:36:34.335Z"}
+info: Connected to the database. {"timestamp":"2022-10-19T07:36:43.447Z"}
+info: Connected to the database. {"timestamp":"2022-10-19T07:37:03.728Z"}
+info: Server started at http://localhost:3003/api/v1/ {"timestamp":"2022-10-19T07:37:19.484Z"}
+info: Connected to the database. {"timestamp":"2022-10-19T07:37:19.498Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to Number failed for value "NaN" (type number) at path "numberOfCards"
+    at model.Query.exec (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/addCard/634f9f091a44926abd282c66 
+    method - PATCH 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-19T07:37:34.249Z"}
+info: Server started at http://localhost:3003/api/v1/ {"timestamp":"2022-10-19T07:38:15.227Z"}
+info: Connected to the database. {"timestamp":"2022-10-19T07:38:15.251Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to Number failed for value "NaN" (type number) at path "numberOfCards"
+    at model.Query.exec (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/addCard/634f9f091a44926abd282c66 
+    method - PATCH 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-19T07:38:17.469Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to Number failed for value "NaN" (type number) at path "numberOfCards"
+    at model.Query.exec (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/addCard/634f9f091a44926abd282c66 
+    method - PATCH 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-19T07:38:21.748Z"}
+info: Server started at http://localhost:3003/api/v1/ {"timestamp":"2022-10-19T07:38:42.865Z"}
+info: Connected to the database. {"timestamp":"2022-10-19T07:38:42.879Z"}
+info: Server started at http://localhost:3003/api/v1/ {"timestamp":"2022-10-19T07:44:19.742Z"}
+info: Connected to the database. {"timestamp":"2022-10-19T07:44:19.759Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to Number failed for value "NaN" (type number) at path "numberOfCards"
+    at model.Query.exec (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/addCard/634f9f091a44926abd282c66 
+    method - PATCH 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-19T07:44:24.189Z"}
+info: Server started at http://localhost:3003/api/v1/ {"timestamp":"2022-10-19T07:44:48.641Z"}
+info: Connected to the database. {"timestamp":"2022-10-19T07:44:48.655Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to Number failed for value "NaN" (type number) at path "numberOfCards"
+    at model.Query.exec (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/addCard/634f9f091a44926abd282c66 
+    method - PATCH 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-19T07:44:51.751Z"}
+info: Server started at http://localhost:3003/api/v1/ {"timestamp":"2022-10-19T07:45:16.060Z"}
+info: Connected to the database. {"timestamp":"2022-10-19T07:45:16.078Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to ObjectId failed for value "{ _id: '634f9f091a44926abd282c66"' }" (type Object) at path "_id" for model "Board"
+    at model.Query.exec (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/deleteCard/634f9f091a44926abd282c66%22 
+    method - PATCH 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-19T07:50:50.143Z"}
+error: 
+    status - 500 
+    message - Error: card by this cardid do not exist
+    at _callee6$ (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:238:19)
+    at tryCatch (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/deleteCard/634f9f091a44926abd282c66 
+    method - PATCH 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-19T07:51:31.090Z"}
+info: Server started at http://localhost:3003/api/v1/ {"timestamp":"2022-10-19T07:51:56.469Z"}
+info: Connected to the database. {"timestamp":"2022-10-19T07:51:56.488Z"}
+info: Server started at http://localhost:3003/api/v1/ {"timestamp":"2022-10-19T07:57:20.344Z"}
+info: Connected to the database. {"timestamp":"2022-10-19T07:57:20.358Z"}
+info: Server started at http://localhost:3003/api/v1/ {"timestamp":"2022-10-19T07:59:02.563Z"}
+info: Connected to the database. {"timestamp":"2022-10-19T07:59:02.582Z"}

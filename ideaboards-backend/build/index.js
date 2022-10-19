@@ -20,7 +20,7 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 _dotenv["default"].config();
 var app = (0, _express["default"])();
 var host = process.env.APP_HOST;
-var port = 3002;
+var port = 3003;
 var api_version = process.env.API_VERSION;
 app.use((0, _cors["default"])());
 app.use((0, _helmet["default"])());

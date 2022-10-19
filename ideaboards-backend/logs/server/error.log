@@ -191,3 +191,160 @@ error:
     method - GET 
     IP - ::ffff:127.0.0.1
    {"timestamp":"2022-10-14T04:36:01.725Z"}
+error: 
+    status - 500 
+    message - TypeError: temp.push is not a function
+    at _callee2$ (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:59:20)
+    at tryCatch (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/getAllBoardName 
+    method - GET 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-19T07:07:12.009Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to Number failed for value "NaN" (type number) at path "numberOfCards"
+    at model.Query.exec (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/addCard/634f9f091a44926abd282c66 
+    method - PATCH 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-19T07:33:47.430Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to Number failed for value "NaN" (type number) at path "numberOfCards"
+    at model.Query.exec (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/addCard/634f9f091a44926abd282c66 
+    method - PATCH 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-19T07:34:50.421Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to Number failed for value "NaN" (type number) at path "numberOfCards"
+    at model.Query.exec (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/addCard/634f9f091a44926abd282c66 
+    method - PATCH 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-19T07:35:30.447Z"}
+error: uncaughtException: listen EADDRINUSE: address already in use :::3002
+Error: listen EADDRINUSE: address already in use :::3002
+    at Server.setupListenHandle [as _listen2] (net.js:1320:16)
+    at listenInCluster (net.js:1368:12)
+    at Server.listen (net.js:1454:7)
+    at Function.listen (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/build/index.js:39:5)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)
+    at internal/main/run_main_module.js:17:47 {"date":"Wed Oct 19 2022 13:06:34 GMT+0530 (India Standard Time)","error":{"address":"::","code":"EADDRINUSE","errno":-48,"port":3002,"syscall":"listen"},"exception":true,"os":{"loadavg":[2.49609375,2.49658203125,2.80126953125],"uptime":165679},"process":{"argv":["/usr/local/bin/node","/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/build/index.js"],"cwd":"/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend","execPath":"/usr/local/bin/node","gid":254699511,"memoryUsage":{"arrayBuffers":18396421,"external":19987583,"heapTotal":56487936,"heapUsed":24270656,"rss":69300224},"pid":38703,"uid":1897316744,"version":"v14.17.6"},"stack":"Error: listen EADDRINUSE: address already in use :::3002\n    at Server.setupListenHandle [as _listen2] (net.js:1320:16)\n    at listenInCluster (net.js:1368:12)\n    at Server.listen (net.js:1454:7)\n    at Function.listen (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/express/lib/application.js:635:24)\n    at Object.<anonymous> (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/build/index.js:39:5)\n    at Module._compile (internal/modules/cjs/loader.js:1072:14)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)\n    at Module.load (internal/modules/cjs/loader.js:937:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:778:12)\n    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)\n    at internal/main/run_main_module.js:17:47","timestamp":"2022-10-19T07:36:34.296Z","trace":[{"column":16,"file":"net.js","function":"Server.setupListenHandle [as _listen2]","line":1320,"method":"setupListenHandle [as _listen2]","native":false},{"column":12,"file":"net.js","function":"listenInCluster","line":1368,"method":null,"native":false},{"column":7,"file":"net.js","function":"Server.listen","line":1454,"method":"listen","native":false},{"column":24,"file":"/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/express/lib/application.js","function":"Function.listen","line":635,"method":"listen","native":false},{"column":5,"file":"/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/build/index.js","function":null,"line":39,"method":null,"native":false},{"column":14,"file":"internal/modules/cjs/loader.js","function":"Module._compile","line":1072,"method":"_compile","native":false},{"column":10,"file":"internal/modules/cjs/loader.js","function":"Module._extensions..js","line":1101,"method":".js","native":false},{"column":32,"file":"internal/modules/cjs/loader.js","function":"Module.load","line":937,"method":"load","native":false},{"column":12,"file":"internal/modules/cjs/loader.js","function":"Module._load","line":778,"method":"_load","native":false},{"column":12,"file":"internal/modules/run_main.js","function":"Function.executeUserEntryPoint [as runMain]","line":76,"method":"executeUserEntryPoint [as runMain]","native":false},{"column":47,"file":"internal/main/run_main_module.js","function":null,"line":17,"method":null,"native":false}]}
+error: uncaughtException: listen EADDRINUSE: address already in use :::3002
+Error: listen EADDRINUSE: address already in use :::3002
+    at Server.setupListenHandle [as _listen2] (net.js:1320:16)
+    at listenInCluster (net.js:1368:12)
+    at Server.listen (net.js:1454:7)
+    at Function.listen (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/build/index.js:39:5)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)
+    at internal/main/run_main_module.js:17:47 {"date":"Wed Oct 19 2022 13:06:43 GMT+0530 (India Standard Time)","error":{"address":"::","code":"EADDRINUSE","errno":-48,"port":3002,"syscall":"listen"},"exception":true,"os":{"loadavg":[2.35205078125,2.4638671875,2.78564453125],"uptime":165688},"process":{"argv":["/usr/local/bin/node","/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/build/index.js"],"cwd":"/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend","execPath":"/usr/local/bin/node","gid":254699511,"memoryUsage":{"arrayBuffers":18384887,"external":19976049,"heapTotal":56750080,"heapUsed":24311096,"rss":69963776},"pid":38735,"uid":1897316744,"version":"v14.17.6"},"stack":"Error: listen EADDRINUSE: address already in use :::3002\n    at Server.setupListenHandle [as _listen2] (net.js:1320:16)\n    at listenInCluster (net.js:1368:12)\n    at Server.listen (net.js:1454:7)\n    at Function.listen (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/express/lib/application.js:635:24)\n    at Object.<anonymous> (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/build/index.js:39:5)\n    at Module._compile (internal/modules/cjs/loader.js:1072:14)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)\n    at Module.load (internal/modules/cjs/loader.js:937:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:778:12)\n    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)\n    at internal/main/run_main_module.js:17:47","timestamp":"2022-10-19T07:36:43.430Z","trace":[{"column":16,"file":"net.js","function":"Server.setupListenHandle [as _listen2]","line":1320,"method":"setupListenHandle [as _listen2]","native":false},{"column":12,"file":"net.js","function":"listenInCluster","line":1368,"method":null,"native":false},{"column":7,"file":"net.js","function":"Server.listen","line":1454,"method":"listen","native":false},{"column":24,"file":"/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/express/lib/application.js","function":"Function.listen","line":635,"method":"listen","native":false},{"column":5,"file":"/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/build/index.js","function":null,"line":39,"method":null,"native":false},{"column":14,"file":"internal/modules/cjs/loader.js","function":"Module._compile","line":1072,"method":"_compile","native":false},{"column":10,"file":"internal/modules/cjs/loader.js","function":"Module._extensions..js","line":1101,"method":".js","native":false},{"column":32,"file":"internal/modules/cjs/loader.js","function":"Module.load","line":937,"method":"load","native":false},{"column":12,"file":"internal/modules/cjs/loader.js","function":"Module._load","line":778,"method":"_load","native":false},{"column":12,"file":"internal/modules/run_main.js","function":"Function.executeUserEntryPoint [as runMain]","line":76,"method":"executeUserEntryPoint [as runMain]","native":false},{"column":47,"file":"internal/main/run_main_module.js","function":null,"line":17,"method":null,"native":false}]}
+error: uncaughtException: listen EADDRINUSE: address already in use :::3002
+Error: listen EADDRINUSE: address already in use :::3002
+    at Server.setupListenHandle [as _listen2] (net.js:1320:16)
+    at listenInCluster (net.js:1368:12)
+    at Server.listen (net.js:1454:7)
+    at Function.listen (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/build/index.js:39:5)
+    at Module._compile (internal/modules/cjs/loader.js:1072:14)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)
+    at Module.load (internal/modules/cjs/loader.js:937:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:778:12)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)
+    at internal/main/run_main_module.js:17:47 {"date":"Wed Oct 19 2022 13:07:03 GMT+0530 (India Standard Time)","error":{"address":"::","code":"EADDRINUSE","errno":-48,"port":3002,"syscall":"listen"},"exception":true,"os":{"loadavg":[3.09228515625,2.6142578125,2.83056640625],"uptime":165708},"process":{"argv":["/usr/local/bin/node","/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/build/index.js"],"cwd":"/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend","execPath":"/usr/local/bin/node","gid":254699511,"memoryUsage":{"arrayBuffers":18369195,"external":19965018,"heapTotal":56487936,"heapUsed":24320640,"rss":70049792},"pid":38766,"uid":1897316744,"version":"v14.17.6"},"stack":"Error: listen EADDRINUSE: address already in use :::3002\n    at Server.setupListenHandle [as _listen2] (net.js:1320:16)\n    at listenInCluster (net.js:1368:12)\n    at Server.listen (net.js:1454:7)\n    at Function.listen (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/express/lib/application.js:635:24)\n    at Object.<anonymous> (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/build/index.js:39:5)\n    at Module._compile (internal/modules/cjs/loader.js:1072:14)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1101:10)\n    at Module.load (internal/modules/cjs/loader.js:937:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:778:12)\n    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:76:12)\n    at internal/main/run_main_module.js:17:47","timestamp":"2022-10-19T07:37:03.710Z","trace":[{"column":16,"file":"net.js","function":"Server.setupListenHandle [as _listen2]","line":1320,"method":"setupListenHandle [as _listen2]","native":false},{"column":12,"file":"net.js","function":"listenInCluster","line":1368,"method":null,"native":false},{"column":7,"file":"net.js","function":"Server.listen","line":1454,"method":"listen","native":false},{"column":24,"file":"/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/express/lib/application.js","function":"Function.listen","line":635,"method":"listen","native":false},{"column":5,"file":"/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/build/index.js","function":null,"line":39,"method":null,"native":false},{"column":14,"file":"internal/modules/cjs/loader.js","function":"Module._compile","line":1072,"method":"_compile","native":false},{"column":10,"file":"internal/modules/cjs/loader.js","function":"Module._extensions..js","line":1101,"method":".js","native":false},{"column":32,"file":"internal/modules/cjs/loader.js","function":"Module.load","line":937,"method":"load","native":false},{"column":12,"file":"internal/modules/cjs/loader.js","function":"Module._load","line":778,"method":"_load","native":false},{"column":12,"file":"internal/modules/run_main.js","function":"Function.executeUserEntryPoint [as runMain]","line":76,"method":"executeUserEntryPoint [as runMain]","native":false},{"column":47,"file":"internal/main/run_main_module.js","function":null,"line":17,"method":null,"native":false}]}
+error: 
+    status - 500 
+    message - CastError: Cast to Number failed for value "NaN" (type number) at path "numberOfCards"
+    at model.Query.exec (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/addCard/634f9f091a44926abd282c66 
+    method - PATCH 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-19T07:37:34.249Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to Number failed for value "NaN" (type number) at path "numberOfCards"
+    at model.Query.exec (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/addCard/634f9f091a44926abd282c66 
+    method - PATCH 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-19T07:38:17.469Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to Number failed for value "NaN" (type number) at path "numberOfCards"
+    at model.Query.exec (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/addCard/634f9f091a44926abd282c66 
+    method - PATCH 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-19T07:38:21.748Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to Number failed for value "NaN" (type number) at path "numberOfCards"
+    at model.Query.exec (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/addCard/634f9f091a44926abd282c66 
+    method - PATCH 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-19T07:44:24.189Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to Number failed for value "NaN" (type number) at path "numberOfCards"
+    at model.Query.exec (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/addCard/634f9f091a44926abd282c66 
+    method - PATCH 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-19T07:44:51.751Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to ObjectId failed for value "{ _id: '634f9f091a44926abd282c66"' }" (type Object) at path "_id" for model "Board"
+    at model.Query.exec (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/deleteCard/634f9f091a44926abd282c66%22 
+    method - PATCH 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-19T07:50:50.143Z"}
+error: 
+    status - 500 
+    message - Error: card by this cardid do not exist
+    at _callee6$ (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:238:19)
+    at tryCatch (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/ashish.saini/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/deleteCard/634f9f091a44926abd282c66 
+    method - PATCH 
+    IP - ::ffff:127.0.0.1
+   {"timestamp":"2022-10-19T07:51:31.090Z"}
