@@ -117,6 +117,29 @@ const EditCard = (
   });
 };
 
+const onClickDelete = (
+  columnName,
+  itemId,
+  columns,
+  cards,
+  setColumns,
+  setCards
+) => {
+  var column = columns[columnName];
+  column.items.forEach((item, index) => {
+    if (item.id === itemId) {
+      column.items.splice(index, 1);
+    }
+  });
+  setColumns({
+    ...columns,
+    [columnName]: {
+      ...column,
+      items: column.items,
+    },
+  });
+};
+
 function Test() {
   const [columns, setColumns] = useState(sectionsDictionary);
   const [cards, setCards] = useState(cardsFromBackend);
@@ -211,6 +234,21 @@ function Test() {
                                       }
                                       value={item.Description}
                                     />
+                                    <button
+                                      onClick={() =>
+                                        onClickDelete(
+                                          column.name,
+                                          item.id,
+                                          columns,
+                                          cards,
+                                          setColumns,
+                                          setCards
+                                        )
+                                      }
+                                      class="btn"
+                                    >
+                                      <i class="fa fa-trash"></i>
+                                    </button>
                                   </div>
                                 );
                               }}
