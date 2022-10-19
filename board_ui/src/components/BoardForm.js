@@ -2,13 +2,15 @@ import React from 'react'
 import { useState } from 'react';
 import './PopForm.css'
 import {formatList} from './helper/FormatList'
-let up = {sections: []}
+import { createBoard } from '../service/boardServices';
+let up = {Sections: []}
 export default function PopupForm({setOpenModal}) {
     const [inputValue, setInputValue] = useState({
         boardName:"",
         description:"",
         format: "Retrospective",
-        sections:[],
+        Sections:[],
+        cards:[],
     });
 
     const handleChange = (e) =>{
@@ -17,13 +19,19 @@ export default function PopupForm({setOpenModal}) {
         }))
     }
     const updateFieldChanged = index => e => {
-        up.sections[index] = e.target.value
+        up.Sections[index] = e.target.value
         setInputValue((prev)=>({
             ...prev,
             ...up,
         }))
     }
-    console.log(inputValue)
+    const handleSubmit = (e) =>{
+        e.preventDefault()
+        console.log(inputValue)
+        createBoard(inputValue)
+        .then( (resp) => {console.log(resp);})
+        .catch( (error) => {console.log(error)})
+    } 
     return(
   <div className="modalBackground">
       <div className="modalContainer">
@@ -61,9 +69,9 @@ export default function PopupForm({setOpenModal}) {
                     item.name === inputValue.format && (
                         item.sections.map((section,index2) =>(
                             // console.log(section)
-                            <div class="mb-3" key={index}>
+                            <div class="mb-3" key={index2}>
                                 <label class="form-label">Section {index2 + 1} *</label>
-                                <input type="text" value={inputValue.sections[index2]} onChange={updateFieldChanged(index2)}  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" />
+                                <input type="text" value={inputValue.Sections[index2]} onChange={updateFieldChanged(index2)}  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" />
                             </div> 
                         ))
                         
@@ -71,7 +79,7 @@ export default function PopupForm({setOpenModal}) {
                 ))
                 } 
 
-                <button type='submit'>Create</button>
+                <button type='submit' onClick={handleSubmit}>Create</button>
             </form>
         </div>
       </div>

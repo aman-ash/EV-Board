@@ -348,3 +348,31 @@ error:
     method - PATCH 
     IP - ::ffff:127.0.0.1
    {"timestamp":"2022-10-19T07:51:31.090Z"}
+error: 
+      status - 400
+      message - Authorization token is required 
+      url - /api/v1/boards/newBoard 
+      method - POST 
+      IP - ::1
+     {"timestamp":"2022-10-19T11:06:06.978Z"}
+error: 
+      status - 400
+      message - Authorization token is required 
+      url - /api/v1/boards/newBoard 
+      method - POST 
+      IP - ::1
+     {"timestamp":"2022-10-19T11:07:08.636Z"}
+error: 
+      status - 400
+      message - Authorization token is required 
+      url - /api/v1/boards/newBoard 
+      method - POST 
+      IP - ::1
+     {"timestamp":"2022-10-19T11:09:43.471Z"}
+error: 
+      status - 400
+      message - Authorization token is required 
+      url - /api/v1/boards/newBoard 
+      method - POST 
+      IP - ::1
+     {"timestamp":"2022-10-19T11:13:53.133Z"}
