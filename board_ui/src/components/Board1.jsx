@@ -3,6 +3,7 @@ import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import { boardData } from "../DummyData";
 import { GrChapterAdd } from "react-icons/gr";
 import { v4 as uuid } from "uuid";
+const lodash = require("lodash");
 
 var sectionsDictionary = {};
 const cardsFromBackend = boardData.Cards;
@@ -223,13 +224,88 @@ const renderElement = (
   });
   return <div>{elementRendered}</div>;
 };
+const FilterCards = (filtertext, columns, setColumns, setBackup) => {
+  if (filtertext.length !== 0) {
+    var filteredCards = lodash.cloneDeep(columns);
+    for (const [key, value] of Object.entries(columns)) {
+      columns[key].items.forEach((card, index) => {
+        if (card.Description.includes(filtertext) === false) {
+          console.log(`${card.Description} doesn't contain ${filtertext}`);
+          const idx = filteredCards[key].items.findIndex(
+            (card1) => card1.Description === card.Description
+          );
+          console.log(`idx:${idx}`);
+          if (idx !== -1) {
+            filteredCards[key].items.splice(idx, 1);
+          }
+        } else {
+          console.log(`${card.Description} contains ${filtertext}`);
+        }
+      });
+    }
+    setBackup(columns);
+    setColumns(filteredCards);
+  }
+};
+const onChangeFilterText = (
+  e,
+  setFiltertext,
+  columns,
+  setColumns,
+  backup,
+  setsubmitDisabled
+) => {
+  const filtertext = e.target.value;
+  setFiltertext(filtertext);
+  if (filtertext === "") {
+    console.log("True");
+    console.log(columns);
+    setColumns(backup);
+    setsubmitDisabled(true);
+  } else {
+    setsubmitDisabled(false);
+  }
+};
 
 function Test() {
   const [columns, setColumns] = useState(sectionsDictionary);
+  const [backup, setBackup] = useState(sectionsDictionary);
   const [cards, setCards] = useState(cardsFromBackend);
+  const [filtertext, setFiltertext] = useState("");
+  const [submitDisabled, setsubmitDisabled] = useState(true);
   console.log(columns);
   return (
     <div style={{ display: "flex", justifyContent: "center", height: "100%" }}>
+      <input
+        id="filter"
+        style={{ height: "20px", position: "absolute", left: "0px" }}
+        type="textarea"
+        placeholder="Type filter text"
+        value={filtertext}
+        onChange={(e) => {
+          onChangeFilterText(
+            e,
+            setFiltertext,
+            columns,
+            setColumns,
+            backup,
+            setsubmitDisabled
+          );
+        }}
+      />
+      <button
+        style={{
+          height: "20px",
+          position: "absolute",
+          left: "150px",
+          color: "white",
+        }}
+        className="btn"
+        disabled={submitDisabled}
+        onClick={() => FilterCards(filtertext, columns, setColumns, setBackup)}
+      >
+        Filter
+      </button>
       <DragDropContext
         onDragEnd={(result) => onDragEnd(result, columns, setColumns)}
       >
