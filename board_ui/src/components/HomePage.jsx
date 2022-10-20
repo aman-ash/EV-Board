@@ -12,7 +12,13 @@ function HomePage() {
   const [isSubmitted, setSubmitted] = useState(false);
   const [showCreate, setShowCreate] = useState(false);
   const [boardFormOpen, setBoardFormOpen] = useState(false)
-  const [errorMessage, setErrorMessage] = useState({})
+  const [errorMessage, setErrorMessage] = useState({
+    defaultValues: {
+      status: "",
+      message:""
+    },
+  })
+
   return (
       <div>
            <div className="container"> 
@@ -93,8 +99,8 @@ function HomePage() {
       }
       {boardFormOpen && <BoardForm setOpenModal={setBoardFormOpen}/>}
       {RegFormOpen && <RegistrationForm setOpenModal={setRegFormOpen} setSubmitted={setSubmitted} setErrorMessage={setErrorMessage}/>}
-      {LoginFormOpen && <LoginForm setOpenModal={setLoginFormOpen} setShowCreate={setShowCreate} setErrorMessage={setErrorMessage} />}
-      {isSubmitted && <PopupForm setSubmitted={setSubmitted} errorMessage/>}
+      {LoginFormOpen && <LoginForm setOpenModal={setLoginFormOpen} setShowCreate={setShowCreate}  setSubmitted={setSubmitted}  setErrorMessage={setErrorMessage} />}
+      {isSubmitted && <PopupForm setSubmitted={setSubmitted} errorMessage={errorMessage}/>}
     </div>
   );
 }

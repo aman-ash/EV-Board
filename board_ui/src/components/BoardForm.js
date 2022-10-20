@@ -79,7 +79,13 @@ export default function PopupForm({setOpenModal}) {
                 ))
                 } 
 
-                <button type='submit' onClick={handleSubmit}>Create</button>
+                <button type='submit'  style={{
+                position: "relative",
+                left: "40%",
+                borderRadius: "10px",
+                }}
+                id="submit-btn" 
+              onClick={handleSubmit}>Create</button>
             </form>
         </div>
       </div>

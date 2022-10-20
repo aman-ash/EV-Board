@@ -3,6 +3,7 @@ import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import { boardData } from "../DummyData";
 import { GrChapterAdd } from "react-icons/gr";
 import { v4 as uuid } from "uuid";
+import { useEffect } from "react";
 
 var sectionsDictionary = {};
 const cardsFromBackend = boardData.Cards;
@@ -44,7 +45,7 @@ const onDragEnd = (result, columns, setColumns) => {
   } else {
     const column = columns[source.droppableId];
     const copiedItems = [...column.items];
-    const [removed] = copiedItems.splice(source.index, 1);
+    const [removed] = copiedItems.splice(source.index, 1); // splice adds or remove elements
     copiedItems.splice(destination.index, 0, removed);
     setColumns({
       ...columns,
@@ -223,6 +224,10 @@ const renderElement = (
   });
   return <div>{elementRendered}</div>;
 };
+
+// useEffect({
+
+// }[columns])
 
 function Test() {
   const [columns, setColumns] = useState(sectionsDictionary);

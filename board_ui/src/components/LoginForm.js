@@ -4,7 +4,12 @@ import { useForm } from "react-hook-form";
 import "./PopForm.css";
 import { signIn } from "../service/userServices";
 
-export default function LoginForm({ setOpenModal, setShowCreate }) {
+export default function LoginForm({ setOpenModal, setShowCreate, setSubmitted, setErrorMessage }) {
+
+  const defaultValues = {
+      email: "",
+      password: "",
+    }
   const {
     register,
     watch,
@@ -13,30 +18,32 @@ export default function LoginForm({ setOpenModal, setShowCreate }) {
     formState: { errors, isSubmitSuccessful },
     reset,
   } = useForm({
-    defaultValues: {
-      email: "",
-      password: "",
-    },
+    defaultValues
   });
 
-  const [isSubmitted, setSubmitted] = useState(false);
-  const [visibleEye, setVisibleEye] = useState(false);
+  const [error, setError] = useState({
+    error: {
+      message:"",
+    },
+  })
 
-  useEffect(() => {
-    if (formState.isSubmitSuccessful) {
-      reset({
-        email: "",
-        password: "",
-      });
-    }
-  }, [formState]);
+  // useEffect(()=>{
+  //   setError({
+  //     "message":"",
+  //   })
+  // },[])
 
   const onSubmit = (data) => {
     signIn(data)
-        .then( (resp) => {console.log(resp); localStorage.setItem('token', resp.data.data); setShowCreate(true);})
-        .catch( (error) => {console.log(error)})
-    setSubmitted(true);
-    setOpenModal(false);
+        .then( (resp) => {console.log(resp); localStorage.setItem('token', resp.data.data); setShowCreate(true); setErrorMessage({
+          status: "200",
+          message: resp.data.message,
+        }); setOpenModal(false); setSubmitted(true) })
+        .catch( (error) => {console.log(error.response.data);
+          setError({
+            "message":error.response.data.message,
+          })
+        })
   };
   return (
     <div className="modalBackground">
@@ -72,15 +79,19 @@ export default function LoginForm({ setOpenModal, setShowCreate }) {
                 class="form-control"
                 id="email"
                 aria-describedby="emailHelp"
+                onChange={()=> setError({
+                  "message":"",
+                })}
               />
               {<span className="errors">{errors.email?.message}</span>}
+              {<span className="errors">{error.message}</span>}
             </div>
             <div className="mb-3">
               <label for="exampleInputEmail1" class="form-label">
                 Password*
               </label>
               <input
-                type={visibleEye ? "text" : "password"}
+                type="password"
                 name="password"
                 {...register("password", {
                   required: "password is required",

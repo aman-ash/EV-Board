@@ -29,11 +29,16 @@ export default function RegistrationForm({
     signUp(data)
       .then((resp) => {
         console.log(resp);
-        setErrorMessage(resp);
+        setErrorMessage({
+          status:"200",
+          message:"SuccessFully!! Registered",
+        });
       })
       .catch((error) => {
-        console.log(error);
-        setErrorMessage(error);
+        setErrorMessage({
+          status: toString(error.response.data.code),
+          message: error.response.data.message,
+        });
       });
     setSubmitted(true);
     setOpenModal(false);
