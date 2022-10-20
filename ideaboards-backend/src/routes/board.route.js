@@ -21,4 +21,7 @@ router.patch('/addCard/:_id', userAuth, boardController.addCard);
 
 router.patch('/deleteCard/:_id', userAuth, boardController.deleteCard);
 
+//route to update a card in board
+router.patch('/updateCard/:_id', userAuth, boardController.updateCard);
+
 export default router;

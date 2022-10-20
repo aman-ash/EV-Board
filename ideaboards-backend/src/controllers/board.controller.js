@@ -113,3 +113,21 @@ export const deleteCard = async (req, res, next) => {
     next(error);
   }
 };
+/**
+ * Controller to update a  card in the board
+ * @param  {object} req - request object
+ * @param {object} res - response object
+ * @param {Function} next
+ */
+export const updateCard = async (req, res, next) => {
+  try {
+    const data = await boardService.updateCard(req.params._id, req.body);
+    res.status(HttpStatus.CREATED).json({
+      code: HttpStatus.CREATED,
+      data: data,
+      message: 'card Updated successfully'
+    });
+  } catch (error) {
+    next(error);
+  }
+};

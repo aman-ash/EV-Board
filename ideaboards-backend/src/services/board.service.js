@@ -96,3 +96,30 @@ export const deleteCard = async (id, body) => {
     throw new Error('board by this boardid do not exist');
   }
 };
+
+export const updateCard = async (id, body) => {
+  const board = await Board.findById({ _id: id });
+  if (board) {
+    let currCard = board.cards;
+    for (var i = 0; i < currCard.length; i++) {
+      console.log(currCard[i]);
+      if (currCard[i].cardId === body.cardId) {
+        currCard[i].cardDescription = body.cardDescription;
+        currCard[i].sectionName = body.sectionName;
+      }
+    }
+
+    const data = await Board.findOneAndUpdate(
+      { _id: id },
+      {
+        cards: currCard
+      },
+      {
+        new: true
+      }
+    );
+    return data;
+  } else {
+    throw new Error('board by this boardid do not exist');
+  }
+};
