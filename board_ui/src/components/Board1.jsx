@@ -202,7 +202,9 @@ const renderElement = (
           />
         );
       } else {
-        elementRendered = <div>{item.Description}</div>;
+        elementRendered = (
+          <div style={{ overflowY: "scroll" }}>{item.Description}</div>
+        );
       }
     }
   });
@@ -299,12 +301,29 @@ function Test() {
                         {...provided.droppableProps}
                         ref={provided.innerRef}
                         style={{
+                          // flex: "1",
+                          // display: "flex",
+                          // flexWrap: "wrap",
+                          padding: "1em",
+                          gap: "1em",
+                          color: "navy",
+                          // width: "100%",
+                          height: "100%",
+                          borderRight: "1px solid black",
+                          borderLeft: "solid black",
+                          // flexDirection: "row",
+                          gap: "6%",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          display: "grid",
+                          // gridAutoRows: "240px",
+                          gridTemplateColumns: "repeat(3,1fr)",
                           background: snapshot.isDraggingOver
                             ? "lightblue"
                             : "lightgrey",
                           padding: 4,
-                          width: 250,
-                          minHeight: 500,
+                          // width: 250,
+                          // minHeight: 500,
                         }}
                       >
                         {column.items.map((item, index) => {
@@ -322,10 +341,17 @@ function Test() {
                                     {...provided.draggableProps}
                                     {...provided.dragHandleProps}
                                     style={{
+                                      padding: "1.2rem",
+                                      borderRadius: "1.2rem",
+                                      textAlign: "center",
+                                      border: "2px solid white",
+                                      transform: "1s",
+                                      fontFamily: "Courier New",
                                       position: "relative",
                                       userSelect: "none",
                                       padding: 16,
-                                      margin: "0 0 8px 0",
+                                      // margin: "0 0 8px 0",
+
                                       minHeight: "50px",
                                       backgroundColor: snapshot.isDragging
                                         ? "#263B4A"

@@ -1,6 +1,7 @@
 /* ---------MAIN PARENT DIV---------- */
 #board-main {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   height: 100%;
 }
@@ -31,7 +32,8 @@
 
 /*---------CARD TEXT-BOX ------------*/
 .card-input {
-  width: 200;
+  /* width: 200; */
+  overflow-y: scroll;
   min-height: 500;
   border: #263b4a;
   user-select: none;
