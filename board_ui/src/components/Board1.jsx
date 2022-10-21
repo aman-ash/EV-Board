@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import { boardData } from "../DummyData";
 import { GrChapterAdd } from "react-icons/gr";
+import "./Board1.css";
 import { v4 as uuid } from "uuid";
 const lodash = require("lodash");
 
@@ -184,18 +185,7 @@ const renderElement = (
       if (item.edit === true) {
         elementRendered = (
           <input
-            style={{
-              width: 200,
-              minHeight: 500,
-              border: "#263B4A",
-              userSelect: "none",
-              padding: "0",
-              margin: "0 0 8px 0",
-              minHeight: "50px",
-              backgroundColor: "#456C86",
-
-              color: "white",
-            }}
+            className="card-input"
             onChange={(event) =>
               EditCard(
                 event,
@@ -227,7 +217,6 @@ const FilterCards = (filtertext, columns, setColumns, setBackup) => {
           const idx = filteredCards[key].items.findIndex(
             (card1) => card1.Description === card.Description
           );
-          console.log(`idx:${idx}`);
           if (idx !== -1) {
             filteredCards[key].items.splice(idx, 1);
           }
@@ -263,10 +252,9 @@ function Test() {
   const [filtertext, setFiltertext] = useState("");
   const [submitDisabled, setsubmitDisabled] = useState(true);
   return (
-    <div style={{ display: "flex", justifyContent: "center", height: "100%" }}>
+    <div id="board-main">
       <input
         id="filter"
-        style={{ height: "20px", position: "absolute", left: "0px" }}
         type="textarea"
         placeholder="Type filter text"
         value={filtertext}
@@ -282,13 +270,7 @@ function Test() {
         }}
       />
       <button
-        style={{
-          height: "20px",
-          position: "absolute",
-          left: "150px",
-          color: "white",
-        }}
-        className="btn"
+        className="submit-ftr-txt-btn btn"
         disabled={submitDisabled}
         onClick={() => FilterCards(filtertext, columns, setColumns, setBackup)}
       >
@@ -299,23 +281,17 @@ function Test() {
       >
         {Object.entries(columns).map(([columnId, column], index) => {
           return (
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}
-              key={columnId}
-            >
-              <h2 style={{ color: "white" }}>{column.name}</h2>
+            <div className="section" key={columnId}>
+              <h2 className="section-heading">{column.name}</h2>
               <button
+                className="add-card-btn"
                 onClick={() =>
                   onClickAdd(column.name, columns, cards, setColumns, setCards)
                 }
               >
                 <GrChapterAdd />
               </button>
-              <div style={{ margin: 8 }}>
+              <div className="section-margin">
                 <Droppable droppableId={columnId} key={columnId}>
                   {(provided, snapshot) => {
                     return (
@@ -341,6 +317,7 @@ function Test() {
                               {(provided, snapshot) => {
                                 return (
                                   <div
+                                    className="board-card"
                                     ref={provided.innerRef}
                                     {...provided.draggableProps}
                                     {...provided.dragHandleProps}
@@ -358,11 +335,7 @@ function Test() {
                                     }}
                                   >
                                     <button
-                                      style={{
-                                        position: "absolute",
-                                        right: "0px",
-                                        top: "0px",
-                                      }}
+                                      className="delete-btn btn"
                                       onClick={() =>
                                         onClickDelete(
                                           column.name,
@@ -373,16 +346,11 @@ function Test() {
                                           setCards
                                         )
                                       }
-                                      className="btn"
                                     >
                                       <i class="fa fa-trash"></i>
                                     </button>
                                     <button
-                                      style={{
-                                        position: "absolute",
-                                        right: "0px",
-                                        bottom: "0px",
-                                      }}
+                                      className="edit-btn btn"
                                       onClick={() =>
                                         onClickEdit(
                                           column.name,
@@ -393,7 +361,6 @@ function Test() {
                                           setCards
                                         )
                                       }
-                                      className="btn"
                                     >
                                       <i class="fa fa-edit"></i>
                                     </button>

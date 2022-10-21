@@ -1,34 +1,78 @@
-/* .edit {
-  animation-name: hide;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  /* animation-play-state: paused; */
-/* }
-@keyframes hide {
-  0% {
-    opacity: 1;
-    height: 100%;
-    line-height: 100%;
-    padding: 20px;
-    margin-bottom: 10px;
-  }
-  75% {
-    opacity: 0;
-    height: 100%;
-    line-height: 100%;
-    padding: 20px;
-    margin-bottom: 10px;
-  }
-  100% {
-    opacity: 0;
-    height: 0px;
-    line-height: 0px;
-    padding: 0px;
-    margin-bottom: 0px;
-  }
-} */
+/* ---------MAIN PARENT DIV---------- */
+#board-main {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+/*-------FILTER TEXT BOX-----------*/
 #filter {
+  height: 20px;
   position: absolute;
-  left: 0%;
-  height: 5px;
+  left: 0px;
+}
+
+/*---------SECTIONS----------------*/
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*-------SECTION HEADING-----------*/
+.section-heading {
+  color: white;
+}
+
+/*---------SECTION-MARGIN -----------*/
+.section-margin {
+  margin: 9px;
+}
+
+/*---------CARD TEXT-BOX ------------*/
+.card-input {
+  width: 200;
+  min-height: 500;
+  border: #263b4a;
+  user-select: none;
+  padding: 0;
+  margin: 0 0 8px 0;
+  min-height: 50px;
+  background-color: #456c86;
+  color: "white";
+}
+/*-------BOARD CARD STYLE-----------     Do Again*/
+/* .board-card {
+  position: relative;
+  user-select: none;
+  padding: 16;
+  margin: 0 0 8px 0;
+  min-height: 50px;
+} */
+
+/*-------DELETE BUTTON-------*/
+.delete-btn {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+/*-----EDIT BUTTON-------*/
+.edit-btn {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+/*------SUBMIT FILTER-TEXT BUTTON -------*/
+.submit-ftr-txt-btn {
+  height: 20px;
+  position: absolute;
+  left: 150px;
+  color: rgb(255, 255, 255);
+}
+
+/*-----ADD CARD BUTTON--------*/
+.add-card-btn {
+  color: blanchedalmond;
 }
