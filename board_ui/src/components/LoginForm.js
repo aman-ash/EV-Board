@@ -59,6 +59,7 @@ export default function LoginForm({ setOpenModal, setShowCreate, setSubmitted, s
         </div>
         <div className="title">
           <h3>Login Form</h3>
+          {<span className="errors">{error.message}</span>}
         </div>
         <div className="body">
           <form method="POST" onSubmit={handleSubmit(onSubmit)}>
@@ -84,7 +85,6 @@ export default function LoginForm({ setOpenModal, setShowCreate, setSubmitted, s
                 })}
               />
               {<span className="errors">{errors.email?.message}</span>}
-              {<span className="errors">{error.message}</span>}
             </div>
             <div className="mb-3">
               <label for="exampleInputEmail1" class="form-label">
@@ -116,6 +116,9 @@ export default function LoginForm({ setOpenModal, setShowCreate, setSubmitted, s
                 class="form-control"
                 id="password"
                 aria-describedby="emailHelp"
+                onChange={()=> setError({
+                  "message":"",
+                })}
               />
               {<span className="errors">{errors.password?.message}</span>}
               {/* <i class="fa fa-eye eye-icon" aria-hidden="true"

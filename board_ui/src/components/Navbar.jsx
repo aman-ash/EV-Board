@@ -5,23 +5,29 @@ import pdfMake from "pdfmake/build/pdfmake.js";
 import pdfFonts from "pdfmake/build/vfs_fonts";
 
 import { getAllBoardsName } from "../service/boardServices";
+import { useEffect } from "react";
+import { useState } from "react";
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
-const getBoardsdata = async () => {
-  const boards = await getAllBoardsName();
-  const arr = [];
-  Object.entries(boards.data.data).forEach(([key, board]) => {
-    arr.push(board);
-  });
-  console.log(boards);
-  console.log(arr);
-  return arr;
-};
-
 export default function Navbar(showBoards) {
-  const allBoards = getBoardsdata();
-  console.log(allBoards, "aman");
+
+  const [boardData, setBoardData] = useState([])
+
+  useEffect(() => {
+   getBoardsdata();
+  }, []);
+  
+  const getBoardsdata =  async () =>{
+    const boards = await getAllBoardsName();
+    const arr = [];
+    Object.entries(boards.data.data).forEach(([key, board]) => {
+      arr.push(board);
+    });
+    setBoardData(arr)
+  }
+
+
   const array = ["1", "3"];
   const document = {
     content: [
@@ -72,10 +78,10 @@ export default function Navbar(showBoards) {
         )}
 
         <span class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          {array.map((board) => {
+          {boardData.map((board) => {
             return (
-              <a class="dropdown-item" href="#">
-                {board}
+              <a class="dropdown-item" href="#" key={board.boardId}>
+                {board.boardName}
               </a>
             );
           })}

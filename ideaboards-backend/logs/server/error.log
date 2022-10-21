@@ -376,3 +376,26 @@ error:
       method - POST 
       IP - ::1
      {"timestamp":"2022-10-19T11:13:53.133Z"}
+error: 
+    status - 500 
+    message - ReferenceError: board is not defined
+    at _callee4$ (/Users/guntuboina.kalyan/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:121:13)
+    at tryCatch (/Users/guntuboina.kalyan/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/guntuboina.kalyan/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/guntuboina.kalyan/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/guntuboina.kalyan/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/guntuboina.kalyan/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at /Users/guntuboina.kalyan/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:27:7
+    at new Promise (<anonymous>)
+    at Object.<anonymous> (/Users/guntuboina.kalyan/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:19:12)
+    at Object.getBoard (/Users/guntuboina.kalyan/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:142:18)
+    at _callee3$ (/Users/guntuboina.kalyan/Desktop/EV-Board/ideaboards-backend/build/controllers/board.controller.js:113:33)
+    at tryCatch (/Users/guntuboina.kalyan/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/guntuboina.kalyan/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/guntuboina.kalyan/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/guntuboina.kalyan/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/guntuboina.kalyan/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9) 
+    url - /api/v1/boards/getBoard/635127038988c7576c09bbd9 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-20T14:31:56.450Z"}

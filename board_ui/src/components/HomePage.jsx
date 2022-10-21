@@ -6,8 +6,9 @@ import LoginForm from "./LoginForm";
 import PopupForm from "./PopupForm";
 import BoardForm from "./BoardForm";
 import Navbar from "./Navbar";
-import { boardData } from "../DummyData";
-function HomePage() {
+import { DummyData } from "../DummyData";
+function HomePage(props) {
+
   const [RegFormOpen, setRegFormOpen] = useState(false);
   const [LoginFormOpen, setLoginFormOpen] = useState(false);
   const [isSubmitted, setSubmitted] = useState(false);
@@ -20,9 +21,10 @@ function HomePage() {
     },
   });
 
+
   return (
     <>
-      <Navbar name={false} sections={boardData.Cards} />
+      <Navbar name={false} sections={DummyData.Cards} />
       <div>
         <div className="container">
           <div className="main"></div>
@@ -98,7 +100,7 @@ function HomePage() {
             </button>
           </div>
         )}
-        {boardFormOpen && <BoardForm setOpenModal={setBoardFormOpen} />}
+        {boardFormOpen && <BoardForm setOpenModal={setBoardFormOpen} setId={props} />}
         {RegFormOpen && (
           <RegistrationForm
             setOpenModal={setRegFormOpen}

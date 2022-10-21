@@ -2,9 +2,12 @@ import React from 'react'
 import { useState } from 'react';
 import './PopForm.css'
 import {formatList} from './helper/FormatList'
+import { useNavigate } from "react-router-dom"; 
 import { createBoard } from '../service/boardServices';
+import { useHistory } from "react-router-dom";
 let up = {Sections: []}
-export default function PopupForm({setOpenModal}) {
+
+export default function PopupForm({setOpenModal, setId}) {
     const [inputValue, setInputValue] = useState({
         boardName:"",
         description:"",
@@ -25,12 +28,17 @@ export default function PopupForm({setOpenModal}) {
             ...up,
         }))
     }
-    const handleSubmit = (e) =>{
+    const HandleSubmit = (e) =>{
+        let id;
         e.preventDefault()
-        console.log(inputValue)
         createBoard(inputValue)
-        .then( (resp) => {console.log(resp);})
+        .then( (resp) => {
+            console.log(resp)
+            setOpenModal(false);
+            id = resp.data.data._id;
+        })
         .catch( (error) => {console.log(error)})
+        setId.setItem(id)
     } 
     return(
   <div className="modalBackground">
@@ -85,7 +93,7 @@ export default function PopupForm({setOpenModal}) {
                 borderRadius: "10px",
                 }}
                 id="submit-btn" 
-              onClick={handleSubmit}>Create</button>
+              onClick={HandleSubmit}>Create</button>
             </form>
         </div>
       </div>

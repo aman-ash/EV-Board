@@ -1,23 +1,12 @@
 import React, { useState } from "react";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
-import { boardData } from "../DummyData";
+import { DummyData } from "../DummyData";
 import { GrChapterAdd } from "react-icons/gr";
 import { v4 as uuid } from "uuid";
 import Navbar from "./Navbar";
+import { useEffect } from "react";
+import { getBoardById } from "../service/boardServices";
 
-var sectionsDictionary = {};
-const cardsFromBackend = boardData.Cards;
-const sections = boardData.Sections;
-sections.forEach((section) => {
-  sectionsDictionary[section] = {};
-  sectionsDictionary[section]["name"] = section;
-  sectionsDictionary[section]["items"] = [];
-});
-
-cardsFromBackend.forEach((Card) => {
-  Card.edit = false;
-  sectionsDictionary[Card.SectionName]["items"].push(Card);
-});
 
 const onDragEnd = (result, columns, setColumns) => {
   if (!result.destination) return;
@@ -218,12 +207,53 @@ const renderElement = (
 };
 
 function Test() {
+  var obj = {}
+  const [boardData, setBoardData] = useState(obj)
+
+  useEffect(() => {
+    loadBoard();
+    for(let i=0;i<100000;i++){
+      let j = i;
+    }
+  },[]);
+
+  let id = "63516404de61650a8794d8b2";
+
+  
+  const loadBoard = async () =>{
+    const board = await getBoardById(id);
+    setBoardData(board.data.data)
+  }
+
+  console.log(boardData, "adsd")
+
+  var sectionsDictionary = {};
+  const cardsFromBackend = boardData.cards;
+  const sections = boardData.Sections;
   const [columns, setColumns] = useState(sectionsDictionary);
   const [cards, setCards] = useState(cardsFromBackend);
 
+
+  
+ 
+  sections.forEach((section) => {
+    sectionsDictionary[section] = {};
+    sectionsDictionary[section]["name"] = section;
+    sectionsDictionary[section]["items"] = [];
+  });
+
+  cardsFromBackend.forEach((Card) => {
+    Card.edit = false;
+    sectionsDictionary[Card.SectionName]["items"].push(Card);
+  });
+
+
+
+
   return (
     <>
-      <Navbar name={true} sections={boardData.Cards} />
+
+      <Navbar name={true} sections={boardData.cards} />
       <div
         style={{ display: "flex", justifyContent: "center", height: "100%" }}
       >

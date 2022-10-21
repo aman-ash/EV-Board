@@ -21,3 +21,11 @@ export const getAllBoardsName = () => {
   );
   return responce;
 };
+
+export const getBoardById = (id) =>{
+  let response = axios.get(
+    "http://localhost:3003/api/v1/boards//getBoard/"+id,
+    headerConfig
+  );
+  return response;
+}

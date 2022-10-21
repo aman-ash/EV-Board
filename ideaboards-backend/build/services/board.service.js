@@ -118,7 +118,7 @@ var getBoard = /*#__PURE__*/function () {
         switch (_context4.prev = _context4.next) {
           case 0:
             _context4.next = 2;
-            return board.findById({
+            return _board["default"].findById({
               _id: id,
               userid: userid
             });

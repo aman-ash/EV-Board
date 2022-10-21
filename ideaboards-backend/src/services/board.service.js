@@ -36,7 +36,7 @@ export const newBoard = async (body) => {
 
 //get single Board
 export const getBoard = async (id, userid) => {
-  const data = await board.findById({ _id: id, userid: userid });
+  const data = await Board.findById({ _id: id, userid: userid });
   if (data === null) {
     throw new Error('board by this id do not exist');
   }

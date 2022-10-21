@@ -1,4 +1,4 @@
-export const boardData = {
+export const DummyData = {
   boardId: 1,
   boardName: "PI - Planning",
   Sections: ["One", "Two", "Three"],
