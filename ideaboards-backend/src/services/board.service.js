@@ -64,7 +64,7 @@ export const addCard = async (id, body) => {
         new: true
       }
     );
-    return data;
+    return newCard.cardId;
   } else {
     throw new Error('board by this boardid do not exist');
   }

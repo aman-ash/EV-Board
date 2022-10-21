@@ -2,22 +2,31 @@ import React, { useState } from "react";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import { DummyData } from "../DummyData";
 import { GrChapterAdd } from "react-icons/gr";
-import { v4 as uuid } from "uuid";
 import Navbar from "./Navbar";
 import { useEffect } from "react";
-import { getBoardById } from "../service/boardServices";
+import {
+  createCard,
+  deleteCard,
+  getBoardById,
+  updateCard,
+} from "../service/boardServices";
 
+import { useParams } from "react-router-dom";
 
-const onDragEnd = (result, columns, setColumns) => {
+const onDragEnd = (result, columns, setColumns, id) => {
   if (!result.destination) return;
   const { source, destination } = result;
+  console.log(result, "result");
 
   if (source.droppableId !== destination.droppableId) {
     const sourceColumn = columns[source.droppableId];
     const destColumn = columns[destination.droppableId];
+    console.log(sourceColumn, "SourceColumn");
+    console.log(destColumn, "DestColumn");
     const sourceItems = [...sourceColumn.items];
     const destItems = [...destColumn.items];
     const [removed] = sourceItems.splice(source.index, 1);
+    console.log(removed, "removed");
     destItems.splice(destination.index, 0, removed);
     setColumns({
       ...columns,
@@ -30,6 +39,17 @@ const onDragEnd = (result, columns, setColumns) => {
         items: destItems,
       },
     });
+
+    const body = {
+      cardId: removed.id,
+      sectionName: destColumn.name,
+      cardDescription: removed.Description,
+    };
+    updateCard(id, body)
+      .then((resp) => {
+        console.log(resp);
+      })
+      .catch((error) => {});
   } else {
     const column = columns[source.droppableId];
     const copiedItems = [...column.items];
@@ -44,20 +64,35 @@ const onDragEnd = (result, columns, setColumns) => {
     });
   }
 };
-const onClickAdd = (columnName, columns, cards, setColumns, setCards) => {
-  const newId = cards.length + 1;
+const onClickAdd = (columnName, columns, cards, setColumns, setCards, id) => {
+  const createCardBoardId = id;
+  const createCardBody = {
+    sectionName: columnName,
+    cardDescription: "aman",
+  };
+
   const newCard = {
-    id: newId.toString(),
-    SectionName: columnName,
+    id: "",
+    sectionName: columnName,
     Description: "",
     edit: false,
   };
+  createCard(createCardBoardId, createCardBody)
+    .then((resp) => {
+      newCard.id = resp.data.data;
+    })
+    .catch((error) => {});
+
+  console.log(newCard);
+
+  console.log("newCrads");
   const column = columns[columnName];
   column.items.forEach((item, index) => {
     if (item.Description.length === 0) {
       newCard.id = item.id;
       column.items.splice(index, 1);
     }
+    console.log(newCard);
   });
 
   var copiedItems = [...column.items];
@@ -110,7 +145,8 @@ const onClickDelete = (
   columns,
   cards,
   setColumns,
-  setCards
+  setCards,
+  id
 ) => {
   var column = columns[columnName];
   column.items.forEach((item, index) => {
@@ -118,6 +154,16 @@ const onClickDelete = (
       column.items.splice(index, 1);
     }
   });
+
+  const body = {
+    cardId: itemId,
+  };
+  deleteCard(id, body)
+    .then((resp) => {
+      console.log(resp);
+    })
+    .catch((error) => {});
+
   setColumns({
     ...columns,
     [columnName]: {
@@ -133,11 +179,15 @@ const onClickEdit = (
   columns,
   cards,
   setColumns,
-  setCards
+  setCards,
+  id
 ) => {
   var column = columns[columnName];
+  let desc = "";
+
   column.items.forEach((item, index) => {
     if (item.id === itemId) {
+      desc = item.Description;
       if (item.edit === false) {
         item.edit = true;
       } else {
@@ -147,6 +197,17 @@ const onClickEdit = (
         }
       }
     }
+
+    const body = {
+      cardId: itemId,
+      cardDescription: desc,
+      sectionName: columnName,
+    };
+    updateCard(id, body)
+      .then((resp) => {
+        console.log(resp);
+      })
+      .catch((error) => {});
   });
   setColumns({
     ...columns,
@@ -207,58 +268,54 @@ const renderElement = (
 };
 
 function Test() {
-  var obj = {}
-  const [boardData, setBoardData] = useState(obj)
-
-  useEffect(() => {
-    loadBoard();
-    for(let i=0;i<100000;i++){
-      let j = i;
-    }
-  },[]);
-
-  let id = "63516404de61650a8794d8b2";
-
-  
-  const loadBoard = async () =>{
-    const board = await getBoardById(id);
-    setBoardData(board.data.data)
-  }
-
-  console.log(boardData, "adsd")
+  var obj = {};
+  let id = useParams();
 
   var sectionsDictionary = {};
-  const cardsFromBackend = boardData.cards;
-  const sections = boardData.Sections;
+  var cardsFromBackend = [];
+  var sections = {};
+  const [boardData, setBoardData] = useState(obj);
   const [columns, setColumns] = useState(sectionsDictionary);
   const [cards, setCards] = useState(cardsFromBackend);
 
+  useEffect(() => {
+    LoadBoard();
+  }, []);
 
-  
- 
-  sections.forEach((section) => {
-    sectionsDictionary[section] = {};
-    sectionsDictionary[section]["name"] = section;
-    sectionsDictionary[section]["items"] = [];
-  });
+  const LoadBoard = async () => {
+    const board = await getBoardById(id.id);
+    setBoardData(board.data.data);
 
-  cardsFromBackend.forEach((Card) => {
-    Card.edit = false;
-    sectionsDictionary[Card.SectionName]["items"].push(Card);
-  });
+    cardsFromBackend = boardData.cards;
+    sections = boardData.Sections;
 
-
-
+    if (sections !== undefined) {
+      sections.forEach((section) => {
+        sectionsDictionary[section] = {};
+        sectionsDictionary[section]["name"] = section;
+        sectionsDictionary[section]["items"] = [];
+      });
+      setColumns(sectionsDictionary);
+    }
+    if (cardsFromBackend !== undefined) {
+      cardsFromBackend.forEach((Card) => {
+        Card.edit = false;
+        sectionsDictionary[Card.sectionName]["items"].push(Card);
+      });
+      setCards(cardsFromBackend);
+    }
+  };
+  console.log("1");
 
   return (
     <>
+      <Navbar name={true} sections={cardsFromBackend} />
 
-      <Navbar name={true} sections={boardData.cards} />
       <div
         style={{ display: "flex", justifyContent: "center", height: "100%" }}
       >
         <DragDropContext
-          onDragEnd={(result) => onDragEnd(result, columns, setColumns)}
+          onDragEnd={(result) => onDragEnd(result, columns, setColumns, id)}
         >
           {Object.entries(columns).map(([columnId, column], index) => {
             return (
@@ -278,7 +335,8 @@ function Test() {
                       columns,
                       cards,
                       setColumns,
-                      setCards
+                      setCards,
+                      id
                     )
                   }
                 >
@@ -333,7 +391,8 @@ function Test() {
                                             columns,
                                             cards,
                                             setColumns,
-                                            setCards
+                                            setCards,
+                                            id
                                           )
                                         }
                                         className="btn"
@@ -348,7 +407,8 @@ function Test() {
                                             columns,
                                             cards,
                                             setColumns,
-                                            setCards
+                                            setCards,
+                                            id
                                           )
                                         }
                                         className="btn"

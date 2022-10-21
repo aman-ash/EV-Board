@@ -8,12 +8,12 @@ import BoardForm from "./BoardForm";
 import Navbar from "./Navbar";
 import { DummyData } from "../DummyData";
 function HomePage(props) {
-
   const [RegFormOpen, setRegFormOpen] = useState(false);
   const [LoginFormOpen, setLoginFormOpen] = useState(false);
   const [isSubmitted, setSubmitted] = useState(false);
   const [showCreate, setShowCreate] = useState(false);
   const [boardFormOpen, setBoardFormOpen] = useState(false);
+  const [showMyBoards, setShowMyBoards] = useState(false);
   const [errorMessage, setErrorMessage] = useState({
     defaultValues: {
       status: "",
@@ -21,10 +21,9 @@ function HomePage(props) {
     },
   });
 
-
   return (
     <>
-      <Navbar name={false} sections={DummyData.Cards} />
+      <Navbar name={showMyBoards} sections={DummyData.Cards} />
       <div>
         <div className="container">
           <div className="main"></div>
@@ -100,7 +99,9 @@ function HomePage(props) {
             </button>
           </div>
         )}
-        {boardFormOpen && <BoardForm setOpenModal={setBoardFormOpen} setId={props} />}
+        {boardFormOpen && (
+          <BoardForm setOpenModal={setBoardFormOpen} setId={props} />
+        )}
         {RegFormOpen && (
           <RegistrationForm
             setOpenModal={setRegFormOpen}
@@ -114,6 +115,7 @@ function HomePage(props) {
             setShowCreate={setShowCreate}
             setSubmitted={setSubmitted}
             setErrorMessage={setErrorMessage}
+            setShowMyBoards={setShowMyBoards}
           />
         )}
         {isSubmitted && (

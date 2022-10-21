@@ -4,12 +4,17 @@ import { useForm } from "react-hook-form";
 import "./PopForm.css";
 import { signIn } from "../service/userServices";
 
-export default function LoginForm({ setOpenModal, setShowCreate, setSubmitted, setErrorMessage }) {
-
+export default function LoginForm({
+  setOpenModal,
+  setShowCreate,
+  setSubmitted,
+  setErrorMessage,
+  setShowMyBoards,
+}) {
   const defaultValues = {
-      email: "",
-      password: "",
-    }
+    email: "",
+    password: "",
+  };
   const {
     register,
     watch,
@@ -18,14 +23,14 @@ export default function LoginForm({ setOpenModal, setShowCreate, setSubmitted, s
     formState: { errors, isSubmitSuccessful },
     reset,
   } = useForm({
-    defaultValues
+    defaultValues,
   });
 
   const [error, setError] = useState({
     error: {
-      message:"",
+      message: "",
     },
-  })
+  });
 
   // useEffect(()=>{
   //   setError({
@@ -35,15 +40,22 @@ export default function LoginForm({ setOpenModal, setShowCreate, setSubmitted, s
 
   const onSubmit = (data) => {
     signIn(data)
-        .then( (resp) => {console.log(resp); localStorage.setItem('token', resp.data.data); setShowCreate(true); setErrorMessage({
+      .then((resp) => {
+        localStorage.setItem("token", resp.data.data);
+        setShowCreate(true);
+        setShowMyBoards(true);
+        setErrorMessage({
           status: "200",
           message: resp.data.message,
-        }); setOpenModal(false); setSubmitted(true) })
-        .catch( (error) => {console.log(error.response.data);
-          setError({
-            "message":error.response.data.message,
-          })
-        })
+        });
+        setOpenModal(false);
+        setSubmitted(true);
+      })
+      .catch((error) => {
+        setError({
+          message: error.response.data.message,
+        });
+      });
   };
   return (
     <div className="modalBackground">
@@ -80,9 +92,11 @@ export default function LoginForm({ setOpenModal, setShowCreate, setSubmitted, s
                 class="form-control"
                 id="email"
                 aria-describedby="emailHelp"
-                onChange={()=> setError({
-                  "message":"",
-                })}
+                onChange={() =>
+                  setError({
+                    message: "",
+                  })
+                }
               />
               {<span className="errors">{errors.email?.message}</span>}
             </div>
@@ -116,9 +130,11 @@ export default function LoginForm({ setOpenModal, setShowCreate, setSubmitted, s
                 class="form-control"
                 id="password"
                 aria-describedby="emailHelp"
-                onChange={()=> setError({
-                  "message":"",
-                })}
+                onChange={() =>
+                  setError({
+                    message: "",
+                  })
+                }
               />
               {<span className="errors">{errors.password?.message}</span>}
               {/* <i class="fa fa-eye eye-icon" aria-hidden="true"

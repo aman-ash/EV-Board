@@ -104,10 +104,10 @@ export const addCard = async (req, res, next) => {
 export const deleteCard = async (req, res, next) => {
   try {
     const data = await boardService.deleteCard(req.params._id, req.body);
-    res.status(HttpStatus.CREATED).json({
-      code: HttpStatus.CREATED,
+    res.status(HttpStatus.OK).json({
+      code: HttpStatus.OK,
       data: data,
-      message: 'card Added  successfully'
+      message: 'card Delete  successfully'
     });
   } catch (error) {
     next(error);

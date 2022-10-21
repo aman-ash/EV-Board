@@ -4,7 +4,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.newBoard = exports.getBoard = exports.getAllBoardName = exports.getAllBoard = exports.deleteCard = exports.addCard = void 0;
+exports.updateCard = exports.newBoard = exports.getBoard = exports.getAllBoardName = exports.getAllBoard = exports.deleteCard = exports.addCard = void 0;
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 var _board = _interopRequireDefault(require("../models/board.model"));
@@ -179,7 +179,7 @@ var addCard = /*#__PURE__*/function () {
             });
           case 9:
             data = _context5.sent;
-            return _context5.abrupt("return", data);
+            return _context5.abrupt("return", newCard.cardId);
           case 13:
             throw new Error('board by this boardid do not exist');
           case 14:
@@ -244,3 +244,53 @@ var deleteCard = /*#__PURE__*/function () {
   };
 }();
 exports.deleteCard = deleteCard;
+var updateCard = /*#__PURE__*/function () {
+  var _ref7 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee7(id, body) {
+    var board, currCard, i, data;
+    return _regenerator["default"].wrap(function _callee7$(_context7) {
+      while (1) {
+        switch (_context7.prev = _context7.next) {
+          case 0:
+            _context7.next = 2;
+            return _board["default"].findById({
+              _id: id
+            });
+          case 2:
+            board = _context7.sent;
+            if (!board) {
+              _context7.next = 12;
+              break;
+            }
+            currCard = board.cards;
+            for (i = 0; i < currCard.length; i++) {
+              console.log(currCard[i]);
+              if (currCard[i].cardId === body.cardId) {
+                currCard[i].cardDescription = body.cardDescription;
+                currCard[i].sectionName = body.sectionName;
+              }
+            }
+            _context7.next = 8;
+            return _board["default"].findOneAndUpdate({
+              _id: id
+            }, {
+              cards: currCard
+            }, {
+              "new": true
+            });
+          case 8:
+            data = _context7.sent;
+            return _context7.abrupt("return", data);
+          case 12:
+            throw new Error('board by this boardid do not exist');
+          case 13:
+          case "end":
+            return _context7.stop();
+        }
+      }
+    }, _callee7);
+  }));
+  return function updateCard(_x10, _x11) {
+    return _ref7.apply(this, arguments);
+  };
+}();
+exports.updateCard = updateCard;

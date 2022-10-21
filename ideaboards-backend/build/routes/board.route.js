@@ -28,5 +28,8 @@ router.get('/getBoard/:_id', _auth.userAuth, boardController.getBoard);
 //route to add a card in board
 router.patch('/addCard/:_id', _auth.userAuth, boardController.addCard);
 router.patch('/deleteCard/:_id', _auth.userAuth, boardController.deleteCard);
+
+//route to update a card in board
+router.patch('/updateCard/:_id', _auth.userAuth, boardController.updateCard);
 var _default = router;
 exports["default"] = _default;

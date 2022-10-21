@@ -5,7 +5,7 @@ var _typeof = require("@babel/runtime/helpers/typeof");
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.newBoard = exports.getBoard = exports.getAllBoardName = exports.getAllBoard = exports.deleteCard = exports.addCard = void 0;
+exports.updateCard = exports.newBoard = exports.getBoard = exports.getAllBoardName = exports.getAllBoard = exports.deleteCard = exports.addCard = void 0;
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 var _httpStatusCodes = _interopRequireDefault(require("http-status-codes"));
@@ -239,10 +239,10 @@ var deleteCard = /*#__PURE__*/function () {
             return boardService.deleteCard(req.params._id, req.body);
           case 3:
             data = _context6.sent;
-            res.status(_httpStatusCodes["default"].CREATED).json({
-              code: _httpStatusCodes["default"].CREATED,
+            res.status(_httpStatusCodes["default"].OK).json({
+              code: _httpStatusCodes["default"].OK,
               data: data,
-              message: 'card Added  successfully'
+              message: 'card Delete  successfully'
             });
             _context6.next = 10;
             break;
@@ -261,4 +261,45 @@ var deleteCard = /*#__PURE__*/function () {
     return _ref6.apply(this, arguments);
   };
 }();
+/**
+ * Controller to update a  card in the board
+ * @param  {object} req - request object
+ * @param {object} res - response object
+ * @param {Function} next
+ */
 exports.deleteCard = deleteCard;
+var updateCard = /*#__PURE__*/function () {
+  var _ref7 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee7(req, res, next) {
+    var data;
+    return _regenerator["default"].wrap(function _callee7$(_context7) {
+      while (1) {
+        switch (_context7.prev = _context7.next) {
+          case 0:
+            _context7.prev = 0;
+            _context7.next = 3;
+            return boardService.updateCard(req.params._id, req.body);
+          case 3:
+            data = _context7.sent;
+            res.status(_httpStatusCodes["default"].CREATED).json({
+              code: _httpStatusCodes["default"].CREATED,
+              data: data,
+              message: 'card Updated successfully'
+            });
+            _context7.next = 10;
+            break;
+          case 7:
+            _context7.prev = 7;
+            _context7.t0 = _context7["catch"](0);
+            next(_context7.t0);
+          case 10:
+          case "end":
+            return _context7.stop();
+        }
+      }
+    }, _callee7, null, [[0, 7]]);
+  }));
+  return function updateCard(_x19, _x20, _x21) {
+    return _ref7.apply(this, arguments);
+  };
+}();
+exports.updateCard = updateCard;

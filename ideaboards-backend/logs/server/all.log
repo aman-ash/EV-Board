@@ -445,3 +445,686 @@ info: Server started at http://localhost:3003/api/v1/ {"timestamp":"2022-10-20T0
 info: Connected to the database. {"timestamp":"2022-10-20T03:59:40.439Z"}
 info: Server started at http://localhost:3003/api/v1/ {"timestamp":"2022-10-20T14:32:17.774Z"}
 info: Connected to the database. {"timestamp":"2022-10-20T14:32:17.796Z"}
+info: Server started at http://localhost:3003/api/v1/ {"timestamp":"2022-10-21T04:34:25.902Z"}
+info: Connected to the database. {"timestamp":"2022-10-21T04:34:25.920Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:43:28.543Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:43:28.553Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:43:28.563Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:43:28.569Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:43:28.586Z"}
+error: 
+      status - 400
+      message - Authorization token is required 
+      url - /api/v1/boards//getBoard/634fe1cb7e13e12e2b3d0b01 
+      method - GET 
+      IP - ::1
+     {"timestamp":"2022-10-21T04:50:56.977Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:55:43.441Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:55:43.536Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:55:43.628Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:55:43.724Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:56:34.629Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:56:34.724Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:56:34.814Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:56:34.849Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:56:53.779Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:56:53.787Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:56:53.793Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:56:53.817Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:56:57.155Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:56:57.168Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:56:57.183Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:56:57.189Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:57:41.614Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:57:41.631Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:57:41.644Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:57:41.654Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:57:47.360Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:57:47.371Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:57:47.384Z"}
+error: 
+    status - 500 
+    message - Error: board by this id do not exist
+    at _callee4$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:131:19)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T04:57:47.391Z"}
+error: 
+      status - 400
+      message - Authorization token is required 
+      url - /api/v1/boards//getBoard/63516404de61650a8794d8b2 
+      method - GET 
+      IP - ::1
+     {"timestamp":"2022-10-21T04:58:05.048Z"}
+error: 
+      status - 400
+      message - Authorization token is required 
+      url - /api/v1/boards//getBoard/635226fe2ccfd10616146eb2 
+      method - GET 
+      IP - ::1
+     {"timestamp":"2022-10-21T04:59:43.883Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to ObjectId failed for value "{ _id: '[object Object]', userid: '635221bd2ccfd10616146e62' }" (type Object) at path "_id" for model "Board"
+    at model.Query.exec (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/[object%20Object] 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T06:24:07.826Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to ObjectId failed for value "{ _id: '[object Object]', userid: '635221bd2ccfd10616146e62' }" (type Object) at path "_id" for model "Board"
+    at model.Query.exec (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/[object%20Object] 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T06:24:07.830Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to ObjectId failed for value "{ _id: '[object Object]', userid: '635221bd2ccfd10616146e62' }" (type Object) at path "_id" for model "Board"
+    at model.Query.exec (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/[object%20Object] 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T06:24:22.108Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to ObjectId failed for value "{ _id: '[object Object]', userid: '635221bd2ccfd10616146e62' }" (type Object) at path "_id" for model "Board"
+    at model.Query.exec (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/[object%20Object] 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T06:24:33.811Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to ObjectId failed for value "{ _id: '[object Object]', userid: '635221bd2ccfd10616146e62' }" (type Object) at path "_id" for model "Board"
+    at model.Query.exec (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/[object%20Object] 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T06:24:34.477Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to ObjectId failed for value "{ _id: '[object Object]', userid: '635221bd2ccfd10616146e62' }" (type Object) at path "_id" for model "Board"
+    at model.Query.exec (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/[object%20Object] 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T06:25:01.876Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to ObjectId failed for value "{ _id: '[object Object]', userid: '635221bd2ccfd10616146e62' }" (type Object) at path "_id" for model "Board"
+    at model.Query.exec (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards//getBoard/[object%20Object] 
+    method - GET 
+    IP - ::1
+   {"timestamp":"2022-10-21T06:25:02.648Z"}
+error: 
+      status - 400
+      message - Authorization token is required 
+      url - /api/v1/boards/addCard/[object%20Object] 
+      method - PATCH 
+      IP - ::1
+     {"timestamp":"2022-10-21T07:44:27.333Z"}
+error: 
+      status - 400
+      message - Authorization token is required 
+      url - /api/v1/boards/addCard/[object%20Object] 
+      method - PATCH 
+      IP - ::1
+     {"timestamp":"2022-10-21T07:46:16.864Z"}
+error: 
+      status - 400
+      message - Authorization token is required 
+      url - /api/v1/boards/addCard/[object%20Object] 
+      method - PATCH 
+      IP - ::1
+     {"timestamp":"2022-10-21T07:47:49.732Z"}
+error: 
+      status - 400
+      message - Authorization token is required 
+      url - /api/v1/boards/addCard/[object%20Object] 
+      method - PATCH 
+      IP - ::1
+     {"timestamp":"2022-10-21T07:47:56.946Z"}
+error: 
+      status - 400
+      message - Authorization token is required 
+      url - /api/v1/boards/addCard/[object%20Object] 
+      method - PATCH 
+      IP - ::1
+     {"timestamp":"2022-10-21T07:48:38.488Z"}
+error: 
+      status - 400
+      message - Authorization token is required 
+      url - /api/v1/boards/addCard/[object%20Object] 
+      method - PATCH 
+      IP - ::1
+     {"timestamp":"2022-10-21T07:49:06.087Z"}
+error: 
+      status - 400
+      message - Authorization token is required 
+      url - /api/v1/boards/addCard/[object%20Object] 
+      method - PATCH 
+      IP - ::1
+     {"timestamp":"2022-10-21T07:49:09.079Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to ObjectId failed for value "{ _id: '[object Object]' }" (type Object) at path "_id" for model "Board"
+    at model.Query.exec (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/addCard/[object%20Object] 
+    method - PATCH 
+    IP - ::1
+   {"timestamp":"2022-10-21T07:50:51.670Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to ObjectId failed for value "{ _id: '[object Object]' }" (type Object) at path "_id" for model "Board"
+    at model.Query.exec (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/addCard/[object%20Object] 
+    method - PATCH 
+    IP - ::1
+   {"timestamp":"2022-10-21T07:50:52.460Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to ObjectId failed for value "{ _id: '[object Object]' }" (type Object) at path "_id" for model "Board"
+    at model.Query.exec (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/addCard/[object%20Object] 
+    method - PATCH 
+    IP - ::1
+   {"timestamp":"2022-10-21T07:50:59.738Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to ObjectId failed for value "{ _id: '[object Object]' }" (type Object) at path "_id" for model "Board"
+    at model.Query.exec (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/addCard/[object%20Object] 
+    method - PATCH 
+    IP - ::1
+   {"timestamp":"2022-10-21T07:52:17.148Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to ObjectId failed for value "{ _id: '[object Object]' }" (type Object) at path "_id" for model "Board"
+    at model.Query.exec (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/addCard/[object%20Object] 
+    method - PATCH 
+    IP - ::1
+   {"timestamp":"2022-10-21T07:52:18.120Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to ObjectId failed for value "{ _id: '[object Object]' }" (type Object) at path "_id" for model "Board"
+    at model.Query.exec (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/addCard/[object%20Object] 
+    method - PATCH 
+    IP - ::1
+   {"timestamp":"2022-10-21T07:52:19.370Z"}
+error: 
+    status - 500 
+    message - CastError: Cast to ObjectId failed for value "{ _id: '[object Object]' }" (type Object) at path "_id" for model "Board"
+    at model.Query.exec (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4498:21)
+    at model.Query.Query.then (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/mongoose/lib/query.js:4592:15)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/addCard/[object%20Object] 
+    method - PATCH 
+    IP - ::1
+   {"timestamp":"2022-10-21T07:52:45.795Z"}
+info: Server started at http://localhost:3003/api/v1/ {"timestamp":"2022-10-21T08:07:26.253Z"}
+info: Connected to the database. {"timestamp":"2022-10-21T08:07:26.268Z"}
+error: 
+    status - 500 
+    message - ReferenceError: cardId is not defined
+    at _callee5$ (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/build/services/board.service.js:182:47)
+    at tryCatch (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:72:17)
+    at Generator._invoke (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:55:24)
+    at Generator.next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/regeneratorRuntime.js:97:21)
+    at asyncGeneratorStep (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:24)
+    at _next (/Users/aman.mahore/Desktop/EV-Board/ideaboards-backend/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:9)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5) 
+    url - /api/v1/boards/addCard/63524ac92ccfd10616146f29 
+    method - PATCH 
+    IP - ::1
+   {"timestamp":"2022-10-21T08:07:32.196Z"}
+info: Server started at http://localhost:3003/api/v1/ {"timestamp":"2022-10-21T08:08:33.895Z"}
+info: Connected to the database. {"timestamp":"2022-10-21T08:08:33.910Z"}
+info: Server started at http://localhost:3003/api/v1/ {"timestamp":"2022-10-21T08:29:05.582Z"}
+info: Connected to the database. {"timestamp":"2022-10-21T08:29:05.595Z"}
+error: 
+      status - 400
+      message - Authorization token is required 
+      url - /api/v1/boards/getBoard/635127038988c7576c09bbd9 
+      method - GET 
+      IP - ::1
+     {"timestamp":"2022-10-21T09:32:21.795Z"}
