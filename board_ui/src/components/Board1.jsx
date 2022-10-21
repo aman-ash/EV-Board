@@ -66,7 +66,6 @@ const onClickAdd = (columnName, columns, cards, setColumns, setCards) => {
   };
   const column = columns[columnName];
   column.items.forEach((item, index) => {
-    console.log(item);
     if (item.Description.length === 0) {
       newCard.id = item.id;
       column.items.splice(index, 1);
@@ -96,9 +95,6 @@ const EditCard = (
   columns,
   setColumns
 ) => {
-  console.log(`item.id:${itemId}`);
-  console.log(`index:${index}`);
-  console.log(cards);
   cards.forEach((card) => {
     console.log(card);
     if (card.id === itemId) {
@@ -152,8 +148,6 @@ const onClickEdit = (
   setColumns,
   setCards
 ) => {
-  console.log("Edit button clicked");
-  console.log(cards);
   var column = columns[columnName];
   column.items.forEach((item, index) => {
     if (item.id === itemId) {
@@ -230,7 +224,6 @@ const FilterCards = (filtertext, columns, setColumns, setBackup) => {
     for (const [key, value] of Object.entries(columns)) {
       columns[key].items.forEach((card, index) => {
         if (card.Description.includes(filtertext) === false) {
-          console.log(`${card.Description} doesn't contain ${filtertext}`);
           const idx = filteredCards[key].items.findIndex(
             (card1) => card1.Description === card.Description
           );
@@ -238,8 +231,6 @@ const FilterCards = (filtertext, columns, setColumns, setBackup) => {
           if (idx !== -1) {
             filteredCards[key].items.splice(idx, 1);
           }
-        } else {
-          console.log(`${card.Description} contains ${filtertext}`);
         }
       });
     }
@@ -258,8 +249,6 @@ const onChangeFilterText = (
   const filtertext = e.target.value;
   setFiltertext(filtertext);
   if (filtertext === "") {
-    console.log("True");
-    console.log(columns);
     setColumns(backup);
     setsubmitDisabled(true);
   } else {
@@ -273,7 +262,6 @@ function Test() {
   const [cards, setCards] = useState(cardsFromBackend);
   const [filtertext, setFiltertext] = useState("");
   const [submitDisabled, setsubmitDisabled] = useState(true);
-  console.log(columns);
   return (
     <div style={{ display: "flex", justifyContent: "center", height: "100%" }}>
       <input
@@ -357,6 +345,7 @@ function Test() {
                                     {...provided.draggableProps}
                                     {...provided.dragHandleProps}
                                     style={{
+                                      position: "relative",
                                       userSelect: "none",
                                       padding: 16,
                                       margin: "0 0 8px 0",
@@ -369,6 +358,11 @@ function Test() {
                                     }}
                                   >
                                     <button
+                                      style={{
+                                        position: "absolute",
+                                        right: "0px",
+                                        top: "0px",
+                                      }}
                                       onClick={() =>
                                         onClickDelete(
                                           column.name,
@@ -384,6 +378,11 @@ function Test() {
                                       <i class="fa fa-trash"></i>
                                     </button>
                                     <button
+                                      style={{
+                                        position: "absolute",
+                                        right: "0px",
+                                        bottom: "0px",
+                                      }}
                                       onClick={() =>
                                         onClickEdit(
                                           column.name,
