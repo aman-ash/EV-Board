@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navbar.css";
-import ev_logo from "./ev-logo.png";
+import ev_logo from "./EAGLEVIEW LOGO COLOR.svg";
 
 const myBoards = [
   { id: 1, name: "board1" },
@@ -13,9 +13,8 @@ const myBoards = [
 export default function Navbar() {
   return (
     <div className="nav">
-      <h5>
+      <h5 style={{ height: "8px" }}>
         <img src={ev_logo} alt={"EvLogo"} />
-        Ev- Board
       </h5>
       <li class="nav-item-dropdown">
         <a

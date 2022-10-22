@@ -203,7 +203,7 @@ const renderElement = (
         );
       } else {
         elementRendered = (
-          <div style={{ overflowY: "scroll" }}>{item.Description}</div>
+          <div className="card-description">{item.Description}</div>
         );
       }
     }
@@ -246,7 +246,20 @@ const onChangeFilterText = (
     setsubmitDisabled(false);
   }
 };
-
+const whichColor = (column) => {
+  if (column.name === "One") {
+    return "#47B5FF";
+  }
+  if (column.name === "Two") {
+    return "#256D85";
+  }
+  if (column.name === "Three") {
+    return "#06283D";
+  }
+  if (column.name === "Four") {
+    return "#47B5FF";
+  }
+};
 function Test() {
   const [columns, setColumns] = useState(sectionsDictionary);
   const [backup, setBackup] = useState(sectionsDictionary);
@@ -254,10 +267,11 @@ function Test() {
   const [filtertext, setFiltertext] = useState("");
   const [submitDisabled, setsubmitDisabled] = useState(true);
   return (
-    <div id="board-main">
+    <div>
       <input
         id="filter"
-        type="textarea"
+        className="form-control"
+        type="text"
         placeholder="Type filter text"
         value={filtertext}
         onChange={(e) => {
@@ -272,148 +286,137 @@ function Test() {
         }}
       />
       <button
-        className="submit-ftr-txt-btn btn"
+        className="submit-ftr-txt-btn btn btn-outline-info"
         disabled={submitDisabled}
         onClick={() => FilterCards(filtertext, columns, setColumns, setBackup)}
       >
         Filter
       </button>
-      <DragDropContext
-        onDragEnd={(result) => onDragEnd(result, columns, setColumns)}
-      >
-        {Object.entries(columns).map(([columnId, column], index) => {
-          return (
-            <div className="section" key={columnId}>
-              <h2 className="section-heading">{column.name}</h2>
-              <button
-                className="add-card-btn"
-                onClick={() =>
-                  onClickAdd(column.name, columns, cards, setColumns, setCards)
-                }
-              >
-                <GrChapterAdd />
-              </button>
-              <div className="section-margin">
-                <Droppable droppableId={columnId} key={columnId}>
-                  {(provided, snapshot) => {
-                    return (
-                      <div
-                        {...provided.droppableProps}
-                        ref={provided.innerRef}
-                        style={{
-                          // flex: "1",
-                          // display: "flex",
-                          // flexWrap: "wrap",
-                          padding: "1em",
-                          gap: "1em",
-                          color: "navy",
-                          // width: "100%",
-                          height: "100%",
-                          borderRight: "1px solid black",
-                          borderLeft: "solid black",
-                          // flexDirection: "row",
-                          gap: "6%",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          display: "grid",
-                          // gridAutoRows: "240px",
-                          gridTemplateColumns: "repeat(3,1fr)",
-                          background: snapshot.isDraggingOver
-                            ? "lightblue"
-                            : "lightgrey",
-                          padding: 4,
-                          // width: 250,
-                          // minHeight: 500,
-                        }}
-                      >
-                        {column.items.map((item, index) => {
-                          return (
-                            <Draggable
-                              key={item.id}
-                              draggableId={item.id}
-                              index={index}
-                            >
-                              {(provided, snapshot) => {
-                                return (
-                                  <div
-                                    className="board-card"
-                                    ref={provided.innerRef}
-                                    {...provided.draggableProps}
-                                    {...provided.dragHandleProps}
-                                    style={{
-                                      padding: "1.2rem",
-                                      borderRadius: "1.2rem",
-                                      textAlign: "center",
-                                      border: "2px solid white",
-                                      transform: "1s",
-                                      fontFamily: "Courier New",
-                                      position: "relative",
-                                      userSelect: "none",
-                                      padding: 16,
-                                      // margin: "0 0 8px 0",
+      <div id="board-main">
+        <DragDropContext
+          onDragEnd={(result) => onDragEnd(result, columns, setColumns)}
+        >
+          {Object.entries(columns).map(([columnId, column], index) => {
+            return (
+              <div className="section" key={columnId}>
+                <h2 className="section-heading">{column.name}</h2>
+                <button
+                  className="add-card-btn btn btn-secondary"
+                  onClick={() =>
+                    onClickAdd(
+                      column.name,
+                      columns,
+                      cards,
+                      setColumns,
+                      setCards
+                    )
+                  }
+                >
+                  <i class="fa fa-plus"></i>
+                  {/* <GrChapterAdd /> */}
+                </button>
+                <div className="section-margin">
+                  <Droppable droppableId={columnId} key={columnId}>
+                    {(provided, snapshot) => {
+                      return (
+                        <div
+                          {...provided.droppableProps}
+                          ref={provided.innerRef}
+                          style={{
+                            // background: snapshot.isDraggingOver
+                            //   ? "lightblue"
+                            //   : "lightgrey",
+                            padding: 4,
+                            width: 400,
+                            minHeight: 500,
+                          }}
+                        >
+                          {column.items.map((item, index) => {
+                            return (
+                              <Draggable
+                                key={item.id}
+                                draggableId={item.id}
+                                index={index}
+                              >
+                                {(provided, snapshot) => {
+                                  return (
+                                    <div
+                                      className="board-card"
+                                      ref={provided.innerRef}
+                                      {...provided.draggableProps}
+                                      {...provided.dragHandleProps}
+                                      style={{
+                                        position: "relative",
+                                        userSelect: "none",
+                                        padding: "16px",
+                                        borderRadius: "10px",
 
-                                      minHeight: "50px",
-                                      backgroundColor: snapshot.isDragging
-                                        ? "#263B4A"
-                                        : "#456C86",
-                                      color: "white",
-                                      ...provided.draggableProps.style,
-                                    }}
-                                  >
-                                    <button
-                                      className="delete-btn btn"
-                                      onClick={() =>
-                                        onClickDelete(
-                                          column.name,
-                                          item.id,
-                                          columns,
-                                          cards,
-                                          setColumns,
-                                          setCards
-                                        )
-                                      }
+                                        margin: "0 0 8px 0",
+                                        minHeight: "50px",
+                                        height: "100px",
+
+                                        backgroundColor: snapshot.isDragging
+                                          ? "lightgrey"
+                                          : whichColor(column),
+                                        color: "white",
+                                        ...provided.draggableProps.style,
+                                      }}
                                     >
-                                      <i class="fa fa-trash"></i>
-                                    </button>
-                                    <button
-                                      className="edit-btn btn"
-                                      onClick={() =>
-                                        onClickEdit(
-                                          column.name,
-                                          item.id,
-                                          columns,
-                                          cards,
-                                          setColumns,
-                                          setCards
-                                        )
-                                      }
-                                    >
-                                      <i class="fa fa-edit"></i>
-                                    </button>
-                                    {renderElement(
-                                      column.name,
-                                      item.id,
-                                      columns,
-                                      cards,
-                                      setColumns,
-                                      setCards
-                                    )}
-                                  </div>
-                                );
-                              }}
-                            </Draggable>
-                          );
-                        })}
-                        {provided.placeholder}
-                      </div>
-                    );
-                  }}
-                </Droppable>
+                                      <button
+                                        className="delete-btn btn"
+                                        onClick={() =>
+                                          onClickDelete(
+                                            column.name,
+                                            item.id,
+                                            columns,
+                                            cards,
+                                            setColumns,
+                                            setCards
+                                          )
+                                        }
+                                      >
+                                        <i class="fa fa-trash"></i>
+                                      </button>
+                                      <button
+                                        className="edit-btn btn"
+                                        onClick={() =>
+                                          onClickEdit(
+                                            column.name,
+                                            item.id,
+                                            columns,
+                                            cards,
+                                            setColumns,
+                                            setCards
+                                          )
+                                        }
+                                      >
+                                        <i class="fa fa-edit"></i>
+                                      </button>
+                                      {renderElement(
+                                        column.name,
+                                        item.id,
+                                        columns,
+                                        cards,
+                                        setColumns,
+                                        setCards
+                                      )}
+                                    </div>
+                                  );
+                                }}
+                              </Draggable>
+                            );
+                          })}
+                          {provided.placeholder}
+                        </div>
+                      );
+                    }}
+                  </Droppable>
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </DragDropContext>
+            );
+          })}
+        </DragDropContext>
+      </div>
     </div>
   );
 }
