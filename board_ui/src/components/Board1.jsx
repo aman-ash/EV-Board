@@ -186,6 +186,7 @@ const renderElement = (
         elementRendered = (
           <input
             className="card-input"
+            style={{ backgroundColor: whichColor(column) }}
             onChange={(event) =>
               EditCard(
                 event,
@@ -255,6 +256,20 @@ const whichColor = (column) => {
   }
   if (column.name === "Three") {
     return "#06283D";
+  }
+  if (column.name === "Four") {
+    return "#47B5FF";
+  }
+};
+const whichDragColor = (column) => {
+  if (column.name === "One") {
+    return "#47dfff";
+  }
+  if (column.name === "Two") {
+    return "#117697";
+  }
+  if (column.name === "Three") {
+    return "#0D2635";
   }
   if (column.name === "Four") {
     return "#47B5FF";
@@ -356,7 +371,7 @@ function Test() {
                                         height: "100px",
 
                                         backgroundColor: snapshot.isDragging
-                                          ? "lightgrey"
+                                          ? whichDragColor(column)
                                           : whichColor(column),
                                         color: "white",
                                         ...provided.draggableProps.style,
