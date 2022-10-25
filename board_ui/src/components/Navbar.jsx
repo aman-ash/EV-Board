@@ -1,16 +1,15 @@
 import React from "react";
 import "./Navbar.css";
-import ev_logo from "./ev-logo.png";
 import pdfMake from "pdfmake/build/pdfmake.js";
 import pdfFonts from "pdfmake/build/vfs_fonts";
-
 import { getAllBoardsName } from "../service/boardServices";
 import { useEffect } from "react";
 import { useState } from "react";
+import ev_logo from "./EAGLEVIEW LOGO COLOR.svg";
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
-export default function Navbar(showBoards) {
+export default function Navbar(sections) {
 
   const [boardData, setBoardData] = useState([])
 
@@ -41,30 +40,28 @@ export default function Navbar(showBoards) {
       },
     ],
   };
-  Object.entries(showBoards.sections).forEach((card) => {
-    document.content.push({
-      columns: [
-        { text: "Section", width: 60, color: "#454545" },
-        { text: ":", width: 10 },
-        { text: card[1].SectionName, width: 50, color: "#808080" },
-        { text: "Description", width: 80, color: "#454545" },
-        { text: ":", width: 10 },
-        { text: card[1].Description, width: 1000, color: "#808080" },
-      ],
-      lineHeight: 2,
-    });
-  });
+  console.log(sections)
+  // Object.entries(sections.sections).forEach((card) => {
+  //   document.content.push({
+  //     columns: [
+  //       { text: "Section", width: 60, color: "#454545" },
+  //       { text: ":", width: 10 },
+  //       { text: card[1].sectionName, width: 50, color: "#808080" },
+  //       { text: "Description", width: 80, color: "#454545" },
+  //       { text: ":", width: 10 },
+  //       { text: card[1].cardDescription, width: 1000, color: "#808080" },
+  //     ],
+  //     lineHeight: 2,
+  //   });
+  // });
   const handleClick = () => {
     pdfMake.createPdf(document).download();
   };
   return (
     <div className="nav">
-      <h5>
         <img src={ev_logo} alt={"EvLogo"} />
-        Ev- Board
-      </h5>
       <li class="nav-item-dropdown">
-        {showBoards.name && (
+        {sections.name && (
           <a
             class="nav-link dropdown-toggle"
             href="#"
@@ -88,7 +85,7 @@ export default function Navbar(showBoards) {
         </span>
       </li>
 
-      {showBoards.name && (
+      {sections.name && (
         <button onClick={handleClick} className="export-button">
           export
         </button>

@@ -1,0 +1,106 @@
+/* ---------MAIN PARENT DIV---------- */
+#board-main {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+    margin: 20px;
+    margin-top: 58px;
+    border: 2px solid grey;
+    background-color: #dff6ff;
+    border-radius: 10px;
+    padding-top: 100px;
+}
+
+/*-------FILTER TEXT BOX-----------*/
+#filter {
+    height: 30px;
+    position: absolute;
+    left: 10px;
+    width: 200px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+/*---------SECTIONS----------------*/
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*-------SECTION HEADING-----------*/
+.section-heading {
+    color: black;
+    font-family: "Handlee", "Roboto", helvetica, cursive;
+}
+
+/*---------SECTION-MARGIN -----------*/
+.section-margin {
+    margin: 9px;
+}
+
+/*---------CARD TEXT-BOX ------------*/
+.card-input {
+    font-family: "Gill Sans", sans-serif;
+    min-height: 500;
+    border: #263b4a;
+    border-radius: 10px;
+    user-select: none;
+    padding: 0;
+    margin: 0 0 8px 0;
+    min-height: 50px;
+    border-color: whitesmoke;
+    color: "white";
+    font-size: 20px;
+}
+
+/*-------BOARD CARD STYLE-----------     Do Again*/
+/* .board-card {
+    position: relative;
+    user-select: none;
+    padding: 16;
+    margin: 0 0 8px 0;
+    min-height: 50px;
+  } */
+
+/*-------DELETE BUTTON-------*/
+.delete-btn {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    color: white;
+}
+
+/*-----EDIT BUTTON-------*/
+.edit-btn {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    color: white;
+}
+
+/*------SUBMIT FILTER-TEXT BUTTON -------*/
+.submit-ftr-txt-btn {
+    height: 30px;
+    position: absolute;
+    left: 240px;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+/*-----ADD CARD BUTTON--------*/
+.add-card-btn {
+    color: blanchedalmond;
+    background-color: rgb(18, 12, 12);
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+/*--------------------------*/
+.card-description {
+    font-size: 20px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+/*-------COLUMN ONE----------*/
